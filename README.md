@@ -1,6 +1,6 @@
 # TSPAN14 AD-cholesterol reproducibility package
 
-This release accompanies the manuscript *Local Alzheimer disease-cholesterol colocalization converges on TSPAN14 canonical-cryptic splice choice*.
+This release accompanies the manuscript *A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice*.
 
 ## Scope
 

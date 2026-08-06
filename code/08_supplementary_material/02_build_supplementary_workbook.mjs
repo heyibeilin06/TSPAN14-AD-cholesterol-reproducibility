@@ -7,7 +7,7 @@ const root = path.resolve(process.argv[2] ?? ".");
 const base = path.join(root, "outputs", "supplement_v19");
 const sourceDir = path.join(base, "source_tables");
 const qaDir = path.join(base, "qa", "workbook");
-const title = "Local Alzheimer disease-cholesterol colocalization converges on TSPAN14 canonical-cryptic splice choice";
+const title = "A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice";
 
 function colName(index) {
   let n = index + 1, out = "";

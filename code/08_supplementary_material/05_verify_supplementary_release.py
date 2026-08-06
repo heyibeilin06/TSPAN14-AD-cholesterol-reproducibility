@@ -10,7 +10,7 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT/"outputs"/"supplement_v19"
 MANUSCRIPT=ROOT/"outputs"/"final_manuscript"/"手稿_主表重制版.docx"
-TITLE="A non-APOE Alzheimer disease-cholesterol locus converges on exact TSPAN14 splice regulation"
+TITLE="A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice"
 OLD_TITLE="An APOE-aware Alzheimer disease-lipid screen identifies exact TSPAN14 splice regulation"
 
 def text(path):

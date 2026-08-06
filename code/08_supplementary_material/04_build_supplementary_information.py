@@ -11,7 +11,7 @@ from docx.oxml.ns import qn
 
 ROOT = Path(__file__).resolve().parents[2]
 BASE = ROOT / "outputs" / "supplement_v19"
-TITLE = "Local Alzheimer disease-cholesterol colocalization converges on TSPAN14 canonical–cryptic splice choice"
+TITLE = "A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice"
 
 METHODS = [
     ("Study design and evidence organization", [

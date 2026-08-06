@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / "outputs" / "supplement_v19"
 SRC = OUT / "source_tables"
 RETAINED = ROOT / "tables" / "supplementary" / "source_data"
-TITLE = "Local Alzheimer disease-cholesterol colocalization converges on TSPAN14 canonical–cryptic splice choice"
+TITLE = "A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice"
 
 
 def read(rel: str) -> pd.DataFrame:
