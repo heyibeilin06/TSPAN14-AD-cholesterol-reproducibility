@@ -16,8 +16,8 @@ def read_tsv(path: Path) -> list[dict]:
 
 
 TEXT_SUFFIXES = {
-    ".cff", ".csv", ".json", ".md", ".mjs", ".py", ".r", ".sh",
-    ".tsv", ".txt", ".yaml", ".yml", ".ps1",
+    "", ".cff", ".csv", ".json", ".md", ".mjs", ".py", ".r", ".sh",
+    ".svg", ".tsv", ".txt", ".yaml", ".yml", ".ps1",
 }
 
 
