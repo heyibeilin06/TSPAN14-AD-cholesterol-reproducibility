@@ -1,0 +1,57 @@
+snp	metric	value	metric_type	position_grch38	functional_prior_score	functional_priority_grade
+rs1870140	4-trait CS	0	binary	80486993	8	moderate_priority_supportive_variant
+rs1870140	CRISPRi	0	binary	80486993	8	moderate_priority_supportive_variant
+rs1870140	EUR LD r2	0	continuous	80486993	8	moderate_priority_supportive_variant
+rs1870140	Exact interval	0	binary	80486993	8	moderate_priority_supportive_variant
+rs1870140	Prime editing	0	binary	80486993	8	moderate_priority_supportive_variant
+rs1870140	Within 20 kb	0	binary	80486993	8	moderate_priority_supportive_variant
+rs1870140	sQTL tissues	1	continuous	80486993	8	moderate_priority_supportive_variant
+rs7922621	4-trait CS	1	binary	80491788	7	context_variant
+rs7922621	CRISPRi	0	binary	80491788	7	context_variant
+rs7922621	EUR LD r2	1	continuous	80491788	7	context_variant
+rs7922621	Exact interval	0	binary	80491788	7	context_variant
+rs7922621	Prime editing	1	binary	80491788	7	context_variant
+rs7922621	Within 20 kb	1	binary	80491788	7	context_variant
+rs7922621	sQTL tissues	0	continuous	80491788	7	context_variant
+rs6586028	4-trait CS	1	binary	80494228	11	high_priority_regulatory_proxy
+rs6586028	CRISPRi	0	binary	80494228	11	high_priority_regulatory_proxy
+rs6586028	EUR LD r2	0	continuous	80494228	11	high_priority_regulatory_proxy
+rs6586028	Exact interval	0	binary	80494228	11	high_priority_regulatory_proxy
+rs6586028	Prime editing	0	binary	80494228	11	high_priority_regulatory_proxy
+rs6586028	Within 20 kb	1	binary	80494228	11	high_priority_regulatory_proxy
+rs6586028	sQTL tissues	1	continuous	80494228	11	high_priority_regulatory_proxy
+rs1902660	4-trait CS	1	binary	80503927	9	moderate_priority_supportive_variant
+rs1902660	CRISPRi	0	binary	80503927	9	moderate_priority_supportive_variant
+rs1902660	EUR LD r2	0	continuous	80503927	9	moderate_priority_supportive_variant
+rs1902660	Exact interval	0	binary	80503927	9	moderate_priority_supportive_variant
+rs1902660	Prime editing	0	binary	80503927	9	moderate_priority_supportive_variant
+rs1902660	Within 20 kb	1	binary	80503927	9	moderate_priority_supportive_variant
+rs1902660	sQTL tissues	1	continuous	80503927	9	moderate_priority_supportive_variant
+rs7080009	4-trait CS	1	binary	80509705	16	highest_priority_functional_anchor
+rs7080009	CRISPRi	1	binary	80509705	16	highest_priority_functional_anchor
+rs7080009	EUR LD r2	0.986813	continuous	80509705	16	highest_priority_functional_anchor
+rs7080009	Exact interval	1	binary	80509705	16	highest_priority_functional_anchor
+rs7080009	Prime editing	0	binary	80509705	16	highest_priority_functional_anchor
+rs7080009	Within 20 kb	1	binary	80509705	16	highest_priority_functional_anchor
+rs7080009	sQTL tissues	1	continuous	80509705	16	highest_priority_functional_anchor
+rs1870138	4-trait CS	1	binary	80509855	16	highest_priority_functional_anchor
+rs1870138	CRISPRi	1	binary	80509855	16	highest_priority_functional_anchor
+rs1870138	EUR LD r2	0.986813	continuous	80509855	16	highest_priority_functional_anchor
+rs1870138	Exact interval	1	binary	80509855	16	highest_priority_functional_anchor
+rs1870138	Prime editing	0	binary	80509855	16	highest_priority_functional_anchor
+rs1870138	Within 20 kb	1	binary	80509855	16	highest_priority_functional_anchor
+rs1870138	sQTL tissues	1	continuous	80509855	16	highest_priority_functional_anchor
+rs1870137	4-trait CS	1	binary	80510092	18	highest_priority_functional_anchor
+rs1870137	CRISPRi	1	binary	80510092	18	highest_priority_functional_anchor
+rs1870137	EUR LD r2	0.986813	continuous	80510092	18	highest_priority_functional_anchor
+rs1870137	Exact interval	1	binary	80510092	18	highest_priority_functional_anchor
+rs1870137	Prime editing	0	binary	80510092	18	highest_priority_functional_anchor
+rs1870137	Within 20 kb	1	binary	80510092	18	highest_priority_functional_anchor
+rs1870137	sQTL tissues	1	continuous	80510092	18	highest_priority_functional_anchor
+rs7096909	4-trait CS	0	binary	80524756	4	context_variant
+rs7096909	CRISPRi	0	binary	80524756	4	context_variant
+rs7096909	EUR LD r2	0	continuous	80524756	4	context_variant
+rs7096909	Exact interval	0	binary	80524756	4	context_variant
+rs7096909	Prime editing	0	binary	80524756	4	context_variant
+rs7096909	Within 20 kb	1	binary	80524756	4	context_variant
+rs7096909	sQTL tissues	0	continuous	80524756	4	context_variant

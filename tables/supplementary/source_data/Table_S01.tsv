@@ -1,0 +1,17 @@
+analysis_block	Evidence layer	Resource	Data type	Trait or context	Use in supplementary analyses	comparison	trait_label	rg	se	lo	hi	p	model	scope
+data resource	AD GWAS	NIAGADS Alzheimer disease GWAS summary statistics	GWAS summary statistics	Alzheimer disease	Disease genetic axis for colocalization and allele harmonization									
+data resource	Lipid GWAS	Global Lipids Genetics Consortium	GWAS summary statistics	HDL-C, LDL-C, triglycerides, total cholesterol, non-HDL-C	Lipid genetic axis for LDSC and local colocalization									
+data resource	LD reference	1000 Genomes European ancestry reference	LD matrix / genotype reference	TSPAN14 chr10 locus	LD-aware coloc.susie, HyPrColoc and fine-mapping									
+data resource	Microglia QTL	MiGA / isoMiGA	Microglia eQTL, sQTL and isoform QTL	Human microglia	TSPAN14 project splice and isoform QTL evidence									
+data resource	External brain xQTL	NIAGADS / FunGen-AD xQTL	Brain sQTL	ROSMAP brain regions	External TSPAN14 target-related splice support									
+data resource	Regulatory annotation	UCSC / ENCODE cCRE	Candidate cis-regulatory annotations	TSPAN14 LD block	Regulatory block and enhancer-like annotation									
+data resource	Disease-state RNA	Agora / AD Knowledge Portal and public AD transcriptomic resources	DGE and DTU summaries	Bulk brain, microglia and neurons	Disease-state transcript context									
+data resource	Protein resources	Open Targets, UKB-PPP, deCODE and public pQTL resources	pQTL / protein resource audit	TSPAN14, ADAM10 and downstream candidates	Protein-layer boundary and validation roadmap									
+baseline LDSC						AD-HDL	HDL-C	0.1394	0.0436	0.053944	0.224856	0.0014	baseline	Unmodified genome-wide statistics
+baseline LDSC						AD-LDL	LDL-C	-0.0227	0.031	-0.08346	0.03806	0.4629	baseline	Unmodified genome-wide statistics
+baseline LDSC						AD-TG	TG	-0.0351	0.032	-0.09782	0.02762	0.2739	baseline	Unmodified genome-wide statistics
+baseline LDSC						AD-TC	TC	-0.0054	0.0344	-0.072824	0.062024	0.8741	baseline	Unmodified genome-wide statistics
+baseline LDSC						AD-nonHDL	non-HDL-C	-0.0638	0.0399	-0.142004	0.014404	0.1093	baseline	Unmodified genome-wide statistics
+baseline LDSC						AD-HDL	HDL-C	0.1155	0.0306	0.055524	0.175476	0.0002	own_lead	GRCh37 LDetect APOE block conditioned on pre-specified observed lead signal(s)
+baseline LDSC						AD-HDL	HDL-C	0.1181	0.0314	0.056556	0.179644	0.0002	pair_union_leads	GRCh37 LDetect APOE block conditioned on pre-specified observed lead signal(s)
+baseline LDSC						AD-HDL	HDL-C	0.1059	0.0278	0.051412	0.160388	0.0001	w5Mb	APOE lead-anchor window exclusion

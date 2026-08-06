@@ -1,0 +1,9 @@
+artifact	role	coordinate_build
+Figure_2_locus_tracks_grch38.tsv	Aligned regional association tracks	GRCh38
+Figure_2_colocalization_scatter.tsv	Locus-comparison scatter panels	GRCh38
+Figure_2_gencode_v38_transcripts.tsv	GENCODE v38 transcript models	GRCh38
+Figure_2_gencode_v38_exons.tsv	GENCODE v38 exon coordinates	GRCh38
+Figure_2_regulatory_elements.tsv	ENCODE candidate cis-regulatory elements	GRCh38
+Figure_2_annotation_markers_grch38.tsv	Published and project variant anchors	GRCh38
+Figure_2_exact_event_coloc.tsv	Exact-event colocalization posterior labels	SNP-aligned summary
+Figure_2_variant_annotation_matrix.tsv	Compact functional annotation matrix	GRCh38

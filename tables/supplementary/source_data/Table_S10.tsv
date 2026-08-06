@@ -1,0 +1,131 @@
+analysis_block	outcome	analysis	parameter	n_instruments	estimate	se	p_value	metric	value	off_diagonal_noise_sd	n_draws	estimate_median	estimate_p025	estimate_p975	se_median	proportion_positive	chromosome	plink_id	cm	BP	plink_a1	plink_a2	SNP	sqtl_effect_allele	sqtl_other_allele	orientation	risk_aligned_allele	plink_to_risk_sign	method	lo	hi	heterogeneity_p	egger_intercept_p	max_relative_change_percent	weak_instrument_bias_bound_percent	diagnostic_result	status
+rebuilt-LD cis-MR numerical sensitivity	AD	ridge	0.0	5.0	0.0650576240618898	0.0108124035502401	1.7774079842434006e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	ridge	1e-08	5.0	0.0650576240189265	0.0108124036434253	1.777408597004595e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	ridge	1e-06	5.0	0.0650576197655756	0.010812412868711	1.777469260983006e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	ridge	0.0001	5.0	0.065057194630793	0.0108133348698435	1.783541897919731e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	ridge	0.01	5.0	0.0650166056742033	0.0109006151017367	2.453998611587446e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	ridge	0.1	5.0	0.0647688745380626	0.011433743005708	1.4727067849233828e-08																														
+rebuilt-LD cis-MR numerical sensitivity	AD	relative_eigenvalue_floor	1e-08	5.0	0.0650576240618898	0.0108124035502401	1.7774079842434006e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	relative_eigenvalue_floor	1e-06	5.0	0.0650576240618898	0.0108124035502401	1.7774079842434006e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	relative_eigenvalue_floor	0.0001	5.0	0.0650576240618898	0.0108124035502401	1.7774079842434006e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	relative_eigenvalue_floor	0.01	5.0	0.0650576240618898	0.0108124035502401	1.7774079842434006e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	relative_eigenvalue_floor	0.05	5.0	0.0649938175839571	0.0111045138163634	4.830200110623088e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	relative_eigenvalue_floor	0.1	5.0	0.0646229565804012	0.0114809718579908	1.8157194043465053e-08																														
+rebuilt-LD cis-MR numerical sensitivity	AD	LD_shrinkage_to_identity	0.01	5.0	0.0650112493864031	0.0108320513134701	1.952037155706578e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	LD_shrinkage_to_identity	0.05	5.0	0.0648687923472312	0.0108576228281698	2.308067446018696e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	LD_shrinkage_to_identity	0.1	5.0	0.0647530249395516	0.0108102300582044	2.098712495062477e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	LD_shrinkage_to_identity	0.2	5.0	0.0646239600744276	0.0105728791304451	9.8243139915355e-10																														
+rebuilt-LD cis-MR numerical sensitivity	AD	LD_shrinkage_to_identity	0.5	5.0	0.0644992494126189	0.0093701753356854	5.841503013660111e-12																														
+rebuilt-LD cis-MR numerical sensitivity	AD	pairwise_r2_clump	0.2	1.0	0.0653359356022214	0.0109982063992722	2.8398223408502303e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	pairwise_r2_clump	0.4	2.0	0.0651237538390332	0.0109403671684185	2.638974586149313e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	pairwise_r2_clump	0.6	5.0	0.0650576240618898	0.0108124035502401	1.7774079842435106e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	pairwise_r2_clump	0.8	5.0	0.0650576240618898	0.0108124035502401	1.7774079842435106e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	leave_one_variant_out	rs10749569	4.0	0.06575163117135	0.0109383959171326	1.8428537465047542e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	leave_one_variant_out	rs7098414	4.0	0.0656586093396579	0.0109011172349733	1.7109890588650135e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	leave_one_variant_out	rs10749608	4.0	0.0648403931222983	0.0108482230350675	2.27211698264715e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	leave_one_variant_out	rs7097656	4.0	0.0631337334250564	0.0124882224157488	4.29350195503054e-07																														
+rebuilt-LD cis-MR numerical sensitivity	AD	leave_one_variant_out	rs7084416	4.0	0.0646705537427191	0.0108107260453919	2.203153156903653e-09																														
+rebuilt-LD cis-MR numerical sensitivity	AD	lead_variant_Wald	rs7097656	1.0	0.0653359356022214	0.0109982063992722	2.8398223408502522e-09																														
+rebuilt-LD cis-MR numerical sensitivity	TC	ridge	0.0	5.0	0.0088114250457356	0.0016521991264919	9.65237462508537e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	ridge	1e-08	5.0	0.0088114250195387	0.0016521991396179	9.652377721405725e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	ridge	1e-06	5.0	0.0088114224260686	0.0016522004390887	9.65268425972723e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	ridge	0.0001	5.0	0.0088111632908088	0.0016523303148057	9.683364164965967e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	ridge	0.01	5.0	0.0087872266188862	0.0016646524499807	1.3009263652244812e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	ridge	0.1	5.0	0.00867388521375	0.0017414604899101	6.331842232451352e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	relative_eigenvalue_floor	1e-08	5.0	0.0088114250457356	0.0016521991264919	9.65237462508537e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	relative_eigenvalue_floor	1e-06	5.0	0.0088114250457356	0.0016521991264919	9.65237462508537e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	relative_eigenvalue_floor	0.0001	5.0	0.0088114250457356	0.0016521991264919	9.65237462508537e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	relative_eigenvalue_floor	0.01	5.0	0.0088114250457356	0.0016521991264919	9.65237462508537e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	relative_eigenvalue_floor	0.05	5.0	0.0086878549640052	0.0016896671683835	2.7218360478738255e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	relative_eigenvalue_floor	0.1	5.0	0.0085257895126043	0.0017416524155254	9.819071697099152e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	LD_shrinkage_to_identity	0.01	5.0	0.0087918610905727	0.0016545468369571	1.0738735479524789e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	LD_shrinkage_to_identity	0.05	5.0	0.0087281600073995	0.0016562038890745	1.36439236643455e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	LD_shrinkage_to_identity	0.1	5.0	0.0086705173312971	0.0016467803788677	1.4008808183609294e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	LD_shrinkage_to_identity	0.2	5.0	0.0085942009373961	0.0016074900361335	8.974664305479807e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	LD_shrinkage_to_identity	0.5	5.0	0.0084799310901023	0.0014197815567242	2.33356991074173e-09																														
+rebuilt-LD cis-MR numerical sensitivity	TC	pairwise_r2_clump	0.2	1.0	0.0089484264928842	0.0016835804450668	1.0658900935388909e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	pairwise_r2_clump	0.4	2.0	0.0087838937657634	0.0016683296559722	1.4012619313797786e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	pairwise_r2_clump	0.6	5.0	0.0088114250457356	0.0016521991264919	9.652374625085269e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	pairwise_r2_clump	0.8	5.0	0.0088114250457356	0.0016521991264919	9.652374625085269e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	leave_one_variant_out	rs10749569	4.0	0.0089009592517963	0.0016678767012905	9.465293644023893e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	leave_one_variant_out	rs7098414	4.0	0.0086758464566553	0.0016511327208358	1.4844200613390214e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	leave_one_variant_out	rs10749608	4.0	0.0089648588417719	0.0016677254842084	7.63703245250983e-08																														
+rebuilt-LD cis-MR numerical sensitivity	TC	leave_one_variant_out	rs7097656	4.0	0.0082749811320161	0.001896817959547	1.2854963299177916e-05																														
+rebuilt-LD cis-MR numerical sensitivity	TC	leave_one_variant_out	rs7084416	4.0	0.0087920525709984	0.0016554789484955	1.0909623484671919e-07																														
+rebuilt-LD cis-MR numerical sensitivity	TC	lead_variant_Wald	rs7097656	1.0	0.0089484264928842	0.0016835804450668	1.0658900935388838e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	ridge	0.0	5.0	0.0083310305422018	0.0016666715704065	5.774697269477467e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	ridge	1e-08	5.0	0.0083310305311297	0.0016666715845426	5.774698737857206e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	ridge	1e-06	5.0	0.0083310294350033	0.0016666729840121	5.774844108222776e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	ridge	0.0001	5.0	0.0083309199207844	0.0016668128532192	5.789388968880426e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	ridge	0.01	5.0	0.0083208918013021	0.0016800743873441	7.319359349413215e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	ridge	0.1	5.0	0.0082796097118057	0.001762131121343	2.619069518016607e-06																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	relative_eigenvalue_floor	1e-08	5.0	0.0083310305422018	0.0016666715704065	5.774697269477467e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	relative_eigenvalue_floor	1e-06	5.0	0.0083310305422018	0.0016666715704065	5.774697269477467e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	relative_eigenvalue_floor	0.0001	5.0	0.0083310305422018	0.0016666715704065	5.774697269477467e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	relative_eigenvalue_floor	0.01	5.0	0.0083310305422018	0.0016666715704065	5.774697269477467e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	relative_eigenvalue_floor	0.05	5.0	0.0082815752048542	0.0017090193294292	1.2609903072453911e-06																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	relative_eigenvalue_floor	0.1	5.0	0.0081761480300444	0.0017656549296879	3.6450161797135454e-06																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	LD_shrinkage_to_identity	0.01	5.0	0.0083219970504772	0.0016696789351708	6.22219155703563e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	LD_shrinkage_to_identity	0.05	5.0	0.0082919909325214	0.0016734158906931	7.228246765792278e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	LD_shrinkage_to_identity	0.1	5.0	0.0082636458226044	0.0016657039753301	7.011203092253589e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	LD_shrinkage_to_identity	0.2	5.0	0.008223083585701	0.0016281569144382	4.405458939853445e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	LD_shrinkage_to_identity	0.5	5.0	0.0081502243761013	0.0014403748839479	1.5278629175391226e-08																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	pairwise_r2_clump	0.2	1.0	0.0086559225350343	0.0017086568267	4.06427915370995e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	pairwise_r2_clump	0.4	2.0	0.0084208361215964	0.0016896394993856	6.234546710615908e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	pairwise_r2_clump	0.6	5.0	0.0083310305422018	0.0016666715704065	5.774697269477524e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	pairwise_r2_clump	0.8	5.0	0.0083310305422018	0.0016666715704065	5.774697269477524e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	leave_one_variant_out	rs10749569	4.0	0.0085698759518062	0.0016907999168319	4.008925174383228e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	leave_one_variant_out	rs7098414	4.0	0.0082963969304462	0.0016718781230733	6.965553408387203e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	leave_one_variant_out	rs10749608	4.0	0.0084851214678375	0.0016814299934599	4.502779883398562e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	leave_one_variant_out	rs7097656	4.0	0.0078930009194303	0.0019215035049983	3.995818148892552e-05																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	leave_one_variant_out	rs7084416	4.0	0.0083175010551538	0.0016704391186544	6.383764722805032e-07																														
+rebuilt-LD cis-MR numerical sensitivity	LDL	lead_variant_Wald	rs7097656	1.0	0.0086559225350343	0.0017086568267	4.06427915370995e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	ridge	0.0	5.0	0.0097195423583212	0.0019637530312858	7.441474807595217e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	ridge	1e-08	5.0	0.0097195423105672	0.0019637530452967	7.441477087390877e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	ridge	1e-06	5.0	0.0097195375829545	0.0019637544323717	7.44170278887525e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	ridge	0.0001	5.0	0.009719065184803	0.0019638930646882	7.464290302536241e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	ridge	0.01	5.0	0.0096752193842546	0.0019770558424718	9.89319002654053e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	ridge	0.1	5.0	0.0094573381295386	0.0020598797261753	4.406859752185073e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	relative_eigenvalue_floor	1e-08	5.0	0.0097195423583212	0.0019637530312858	7.441474807595217e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	relative_eigenvalue_floor	1e-06	5.0	0.0097195423583212	0.0019637530312858	7.441474807595217e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	relative_eigenvalue_floor	0.0001	5.0	0.0097195423583212	0.0019637530312858	7.441474807595217e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	relative_eigenvalue_floor	0.01	5.0	0.0097195423583212	0.0019637530312858	7.441474807595217e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	relative_eigenvalue_floor	0.05	5.0	0.0095160910029508	0.0020020218507172	2.001821570369655e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	relative_eigenvalue_floor	0.1	5.0	0.0092217887773201	0.0020550057118585	7.207193371026016e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	LD_shrinkage_to_identity	0.01	5.0	0.0096816763049506	0.001965304137473	8.380162296904185e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	LD_shrinkage_to_identity	0.05	5.0	0.0095576531443292	0.001963217277288	1.1252684181755512e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	LD_shrinkage_to_identity	0.1	5.0	0.0094440070358329	0.0019483671875299	1.2525452378935422e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	LD_shrinkage_to_identity	0.2	5.0	0.0092902006761101	0.0018970577547833	9.723027960023187e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	LD_shrinkage_to_identity	0.5	5.0	0.0090486586985535	0.0016690114722501	5.907861245615632e-08																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	pairwise_r2_clump	0.2	1.0	0.0100109730866203	0.0020042972873337	5.891062911931289e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	pairwise_r2_clump	0.4	2.0	0.0096625612377733	0.0019784505722269	1.0400610708468968e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	pairwise_r2_clump	0.6	5.0	0.0097195423583212	0.0019637530312858	7.441474807595384e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	pairwise_r2_clump	0.8	5.0	0.0097195423583212	0.0019637530312858	7.441474807595384e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	leave_one_variant_out	rs10749569	4.0	0.009964775449618	0.0019889959070632	5.444340987202662e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	leave_one_variant_out	rs7098414	4.0	0.0095281538329783	0.0019605728739839	1.174554330693459e-06																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	leave_one_variant_out	rs10749608	4.0	0.0098657705350203	0.001978135371092	6.119436630315246e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	leave_one_variant_out	rs7097656	4.0	0.0086269385002726	0.0022145236977888	9.794863864787728e-05																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	leave_one_variant_out	rs7084416	4.0	0.0097379105580235	0.0019689936129487	7.589865688903129e-07																														
+rebuilt-LD cis-MR numerical sensitivity	nonHDL	lead_variant_Wald	rs7097656	1.0	0.0100109730866203	0.0020042972873337	5.891062911931289e-07																														
+rebuilt-LD diagnostics								minimum_eigenvalue	0.1391521224102103																												
+rebuilt-LD diagnostics								maximum_eigenvalue	3.4815205627401964																												
+rebuilt-LD diagnostics								condition_number	25.019529004932604																												
+rebuilt-LD diagnostics								effective_rank_entropy	2.678619853525953																												
+rebuilt-LD diagnostics								effective_rank_eigenvalue_gt_0.1	5.0																												
+LD perturbation sensitivity	AD									0.02	1000.0	0.0650790127972307	0.064304552009187	0.0660416288205324	0.0107865499673705	1.0																					
+LD perturbation sensitivity	AD									0.05	1000.0	0.0651470406588583	0.0625690322261631	0.0716790301261652	0.010691814907562	1.0																					
+LD perturbation sensitivity	TC									0.02	1000.0	0.0088095136180832	0.0086312987173176	0.0090359784647236	0.0016484845570032	1.0																					
+LD perturbation sensitivity	TC									0.05	1000.0	0.0088296244996421	0.0083127515292826	0.0098856536345564	0.001626633984879	1.0																					
+LD perturbation sensitivity	LDL									0.02	1000.0	0.0083293965562814	0.0081179242517338	0.0085210585821584	0.0016624028368155	1.0																					
+LD perturbation sensitivity	LDL									0.05	1000.0	0.0083652022708611	0.0076293882212191	0.0093212173001466	0.0016431717767456	1.0																					
+LD perturbation sensitivity	nonHDL									0.02	1000.0	0.009732667915211	0.0094489646770154	0.0100412901098109	0.001960487093	1.0																					
+LD perturbation sensitivity	nonHDL									0.05	1000.0	0.0098659501643053	0.0089953990995856	0.0117261856208403	0.0019350781561954	1.0																					
+signed allele mapping							2.57849e-10										10.0	10:82129892:G:A	0.0	82129892.0	G	A	rs10749569	A	G	1.0	A	-1.0									
+signed allele mapping							7.11575e-12										10.0	10:82214586:A:C	0.0	82214586.0	A	C	rs7098414	C	A	1.0	C	-1.0									
+signed allele mapping							1.19972e-08										10.0	10:82243986:A:G	0.0	82243986.0	A	G	rs10749608	G	A	1.0	G	-1.0									
+signed allele mapping							3.93956e-21										10.0	10:82250831:T:C	0.0	82250831.0	T	C	rs7097656	C	T	1.0	C	-1.0									
+signed allele mapping							8.98283e-12										10.0	10:82304297:G:A	0.0	82304297.0	A	G	rs7084416	A	G	-1.0	G	-1.0									
+maximal sample-overlap sensitivity	AD				0.0642241140111701		7.0382521760378665e-90																											1.3627589436993604e-05	3.0781085785237066		True
+maximal sample-overlap sensitivity	TC				0.0079540225206438		7.691324657846191e-63																											0.0010021538589152	3.0781085785237066		True
+maximal sample-overlap sensitivity	LDL				0.0075873057865879		9.841782221785988e-56																											0.0014139795588915	3.0781085785237066		True
+maximal sample-overlap sensitivity	nonHDL				0.0083651449489703		1.484516357662208e-50																											0.0029795691679089	3.0781085785237066		True

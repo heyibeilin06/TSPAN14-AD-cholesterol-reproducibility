@@ -1,0 +1,334 @@
+analysis_block	analysis	estimate	effect_scale	odds_ratio	odds_ratio_95ci_low	odds_ratio_95ci_high	p_value	p_value_test	n_donors	converged	interpretation	minimum_cluster_depth	donors	cryptic_positive_donors	genotype_log_odds	odds_ratio_per_risk_allele	omitted_row	minimum_cluster_reads	n	alt_allele	per_alt_allele_delta_ier_percentage_points	bootstrap_95ci_low	bootstrap_95ci_high	homozygote_contrast_percentage_points	phenotype_id	variant_id	reference_allele	alternative_effect_allele	normalized_effect_size	normalized_effect_se	sQTL_p_value	maf	n_dynamic_sqtl	n_raw_ier_matched	phenotype_api_value_sets_identical	maximum_value_matching_difference	metric	not_metric	effect_allele_orientation	primary_per_c_allele_delta_ier_percentage_points	primary_hc3_p_value	recount3_official_target_count_spearman_rho	sample_id	recount3_target_reads	official_gtex_target_reads	n_shared_samples	pearson_r	pearson_p	spearman_rho	spearman_p	median_recount3_to_official_count_ratio
+penalized donor-detection and beta-binomial read-count models	Firth logistic trend: any cryptic-acceptor read	-4.457823771844704	log odds per risk-aligned allele	0.0115875530273655	0.0012369612702135	0.0487638579164935	1.8495699502688698e-18	penalized likelihood-ratio test	147.0	True	Risk-aligned genotype is associated with lower detection of the competing cryptic acceptor.																																								
+penalized donor-detection and beta-binomial read-count models	Depth-adjusted Firth logistic trend: any cryptic-acceptor read	-4.338739562299969	log odds per rs7080009 risk-aligned allele, adjusted for standardized log cluster depth	0.0130529702950021	0.0014137670482757	0.0538997858356747	1.037037805558456e-17	penalized likelihood-ratio test	147.0	True	Risk-aligned genotype remains associated with lower cryptic-acceptor detection after adjustment for local cluster depth.																																								
+penalized donor-detection and beta-binomial read-count models	Beta-binomial cryptic-versus-canonical read model	-1.8981096855269024	log odds of a cryptic read per rs7080009 risk-aligned allele	0.1498516183426692	0.0917795123794693	0.2374990103501709	4.4481532412310823e-14	beta-binomial likelihood-ratio test	147.0	True	A read-count model accounting for overdispersion supports lower cryptic-versus-canonical read use with increasing rs7080009 risk-allele dosage.																																								
+penalized donor-detection and beta-binomial read-count models	Fisher exact: risk homozygotes versus other genotypes	0.0	odds ratio for any cryptic-acceptor read	0.0			1.198821058677786e-18	Fisher exact test	147.0	True	The zero cryptic-read count in risk homozygotes constitutes complete separation and motivates penalized inference.																																								
+penalized donor-detection and beta-binomial read-count models	Observed donor-level canonical fraction	0.0442639106924821	absolute fraction difference: genotype 2 minus genotype 0					descriptive	147.0	True	Descriptive magnitude only; sparse competing-junction counts preclude a precise continuous isoform-shift estimate.																																								
+depth-threshold sensitivity										True		1.0	147.0	26.0	-4.457823771844704	0.0115875530273655																																			
+depth-threshold sensitivity										True		10.0	145.0	26.0	-4.439406719597927	0.0118029388952868																																			
+depth-threshold sensitivity										True		20.0	121.0	24.0	-4.113710183463848	0.0163470114633249																																			
+depth-threshold sensitivity										True		30.0	88.0	20.0	-5.344789244545548	0.0047729570260718																																			
+depth-threshold sensitivity										True		50.0	35.0	5.0	-3.701883873638324	0.024676994314688																																			
+leave-one-donor-out sensitivity										True					-4.409171364180917	0.0121652547203188	0.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	1.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	2.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	3.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	4.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	5.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	6.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	7.0																																		
+leave-one-donor-out sensitivity										True					-4.448657619942316	0.0116942545728054	8.0																																		
+leave-one-donor-out sensitivity										True					-4.409169868965437	0.0121652729100096	9.0																																		
+leave-one-donor-out sensitivity										True					-4.448657764787312	0.0116942528789512	10.0																																		
+leave-one-donor-out sensitivity										True					-4.448657764787312	0.0116942528789512	11.0																																		
+leave-one-donor-out sensitivity										True					-4.448657764787312	0.0116942528789512	12.0																																		
+leave-one-donor-out sensitivity										True					-4.448657764787312	0.0116942528789512	13.0																																		
+leave-one-donor-out sensitivity										True					-4.448657764787312	0.0116942528789512	14.0																																		
+leave-one-donor-out sensitivity										True					-4.409170387628764	0.0121652666003303	15.0																																		
+leave-one-donor-out sensitivity										True					-4.44865819412502	0.0116942478581686	16.0																																		
+leave-one-donor-out sensitivity										True					-4.409171457612205	0.0121652535837035	17.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	18.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	19.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	20.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	21.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	22.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	23.0																																		
+leave-one-donor-out sensitivity										True					-4.448658282066528	0.0116942468297588	24.0																																		
+leave-one-donor-out sensitivity										True					-4.451618658053551	0.0116596786549009	25.0																																		
+leave-one-donor-out sensitivity										True					-4.448658315702751	0.0116942464364085	26.0																																		
+leave-one-donor-out sensitivity										True					-4.448658315702751	0.0116942464364085	27.0																																		
+leave-one-donor-out sensitivity										True					-4.448658315702751	0.0116942464364085	28.0																																		
+leave-one-donor-out sensitivity										True					-4.448658315702751	0.0116942464364085	29.0																																		
+leave-one-donor-out sensitivity										True					-4.40917075880313	0.012165262084896	30.0																																		
+leave-one-donor-out sensitivity										True					-4.515823798837123	0.0109345935100435	31.0																																		
+leave-one-donor-out sensitivity										True					-4.448657487610137	0.0116942561203317	32.0																																		
+leave-one-donor-out sensitivity										True					-4.448657487610137	0.0116942561203317	33.0																																		
+leave-one-donor-out sensitivity										True					-4.448657487610137	0.0116942561203317	34.0																																		
+leave-one-donor-out sensitivity										True					-4.451615084493776	0.0116597203215339	35.0																																		
+leave-one-donor-out sensitivity										True					-4.448658518399706	0.0116942440660206	36.0																																		
+leave-one-donor-out sensitivity										True					-4.515823245159615	0.0109345995642836	37.0																																		
+leave-one-donor-out sensitivity										True					-4.448656821229818	0.0116942639131564	38.0																																		
+leave-one-donor-out sensitivity										True					-4.448656821229818	0.0116942639131564	39.0																																		
+leave-one-donor-out sensitivity										True					-4.515822891908582	0.0109346034269429	40.0																																		
+leave-one-donor-out sensitivity										True					-4.448657078221156	0.0116942609078322	41.0																																		
+leave-one-donor-out sensitivity										True					-4.448657078221156	0.0116942609078322	42.0																																		
+leave-one-donor-out sensitivity										True					-4.448657078221156	0.0116942609078322	43.0																																		
+leave-one-donor-out sensitivity										True					-4.448657078221156	0.0116942609078322	44.0																																		
+leave-one-donor-out sensitivity										True					-4.409169438243736	0.0121652781498578	45.0																																		
+leave-one-donor-out sensitivity										True					-4.448657562858118	0.0116942552403625	46.0																																		
+leave-one-donor-out sensitivity										True					-4.409171784271647	0.0121652496098092	47.0																																		
+leave-one-donor-out sensitivity										True					-4.409171784271647	0.0121652496098092	48.0																																		
+leave-one-donor-out sensitivity										True					-4.515823969271051	0.0109345916464179	49.0																																		
+leave-one-donor-out sensitivity										True					-4.448657188571716	0.0116942596173641	50.0																																		
+leave-one-donor-out sensitivity										True					-4.448657188571716	0.0116942596173641	51.0																																		
+leave-one-donor-out sensitivity										True					-4.448657188571716	0.0116942596173641	52.0																																		
+leave-one-donor-out sensitivity										True					-4.448657188571716	0.0116942596173641	53.0																																		
+leave-one-donor-out sensitivity										True					-4.448657188571716	0.0116942596173641	54.0																																		
+leave-one-donor-out sensitivity										True					-4.515823369835559	0.0109345982010022	55.0																																		
+leave-one-donor-out sensitivity										True					-4.448657230555519	0.0116942591263946	56.0																																		
+leave-one-donor-out sensitivity										True					-4.448657230555519	0.0116942591263946	57.0																																		
+leave-one-donor-out sensitivity										True					-4.448657230555519	0.0116942591263946	58.0																																		
+leave-one-donor-out sensitivity										True					-4.448657230555519	0.0116942591263946	59.0																																		
+leave-one-donor-out sensitivity										True					-4.409170837950505	0.0121652611220475	60.0																																		
+leave-one-donor-out sensitivity										True					-4.448658510373827	0.0116942441598772	61.0																																		
+leave-one-donor-out sensitivity										True					-4.448658510373827	0.0116942441598772	62.0																																		
+leave-one-donor-out sensitivity										True					-4.448658510373827	0.0116942441598772	63.0																																		
+leave-one-donor-out sensitivity										True					-4.448658510373827	0.0116942441598772	64.0																																		
+leave-one-donor-out sensitivity										True					-4.448658510373827	0.0116942441598772	65.0																																		
+leave-one-donor-out sensitivity										True					-4.51582363052716	0.0109345953504447	66.0																																		
+leave-one-donor-out sensitivity										True					-4.409169941205934	0.0121652720311843	67.0																																		
+leave-one-donor-out sensitivity										True					-4.448657234719927	0.0116942590776949	68.0																																		
+leave-one-donor-out sensitivity										True					-4.448657234719927	0.0116942590776949	69.0																																		
+leave-one-donor-out sensitivity										True					-4.409172361380336	0.0121652425891399	70.0																																		
+leave-one-donor-out sensitivity										True					-4.448657065829604	0.0116942610527423	71.0																																		
+leave-one-donor-out sensitivity										True					-4.515821966308814	0.010934613548014	72.0																																		
+leave-one-donor-out sensitivity										True					-4.448659558133729	0.0116942319071235	73.0																																		
+leave-one-donor-out sensitivity										True					-4.40917113697301	0.0121652574843612	74.0																																		
+leave-one-donor-out sensitivity										True					-4.448657116219412	0.0116942604634707	75.0																																		
+leave-one-donor-out sensitivity										True					-4.51582219312404	0.0109346110678774	76.0																																		
+leave-one-donor-out sensitivity										True					-4.448655949954857	0.0116942741020802	77.0																																		
+leave-one-donor-out sensitivity										True					-4.448655949954857	0.0116942741020802	78.0																																		
+leave-one-donor-out sensitivity										True					-4.409170465410767	0.0121652656540916	79.0																																		
+leave-one-donor-out sensitivity										True					-4.448658574476596	0.0116942434102438	80.0																																		
+leave-one-donor-out sensitivity										True					-4.448658574476596	0.0116942434102438	81.0																																		
+leave-one-donor-out sensitivity										True					-4.448658574476596	0.0116942434102438	82.0																																		
+leave-one-donor-out sensitivity										True					-4.448658574476596	0.0116942434102438	83.0																																		
+leave-one-donor-out sensitivity										True					-4.409172850842657	0.0121652366347135	84.0																																		
+leave-one-donor-out sensitivity										True					-4.448657863603106	0.0116942517233744	85.0																																		
+leave-one-donor-out sensitivity										True					-4.448657863603106	0.0116942517233744	86.0																																		
+leave-one-donor-out sensitivity										True					-4.451619362420925	0.0116596704422065	87.0																																		
+leave-one-donor-out sensitivity										True					-4.448658808088972	0.0116942406783242	88.0																																		
+leave-one-donor-out sensitivity										True					-4.451616399121131	0.0116597049933567	89.0																																		
+leave-one-donor-out sensitivity										True					-4.409169874168777	0.0121652728467096	90.0																																		
+leave-one-donor-out sensitivity										True					-4.409169874168777	0.0121652728467096	91.0																																		
+leave-one-donor-out sensitivity										True					-4.448657214054875	0.0116942593193574	92.0																																		
+leave-one-donor-out sensitivity										True					-4.515823737550509	0.0109345941801877	93.0																																		
+leave-one-donor-out sensitivity										True					-4.448658064143651	0.011694249378203	94.0																																		
+leave-one-donor-out sensitivity										True					-4.409170433811908	0.0121652660385001	95.0																																		
+leave-one-donor-out sensitivity										True					-4.448658048012968	0.0116942495668393	96.0																																		
+leave-one-donor-out sensitivity										True					-4.515822611115498	0.0109346064973044	97.0																																		
+leave-one-donor-out sensitivity										True					-4.515822611115498	0.0109346064973044	98.0																																		
+leave-one-donor-out sensitivity										True					-4.451618103193527	0.0116596851243922	99.0																																		
+leave-one-donor-out sensitivity										True					-4.448658167835225	0.011694248165608	100.0																																		
+leave-one-donor-out sensitivity										True					-4.448658167835225	0.011694248165608	101.0																																		
+leave-one-donor-out sensitivity										True					-4.448658167835225	0.011694248165608	102.0																																		
+leave-one-donor-out sensitivity										True					-4.409169377041076	0.0121652788944052	103.0																																		
+leave-one-donor-out sensitivity										True					-4.448656692126119	0.0116942654229292	104.0																																		
+leave-one-donor-out sensitivity										True					-4.448656692126119	0.0116942654229292	105.0																																		
+leave-one-donor-out sensitivity										True					-4.448656692126119	0.0116942654229292	106.0																																		
+leave-one-donor-out sensitivity										True					-4.448656692126119	0.0116942654229292	107.0																																		
+leave-one-donor-out sensitivity										True					-4.515824050386982	0.0109345907594484	108.0																																		
+leave-one-donor-out sensitivity										True					-4.448658027718628	0.0116942498041663	109.0																																		
+leave-one-donor-out sensitivity										True					-4.448658027718628	0.0116942498041663	110.0																																		
+leave-one-donor-out sensitivity										True					-4.448658027718628	0.0116942498041663	111.0																																		
+leave-one-donor-out sensitivity										True					-4.448658027718628	0.0116942498041663	112.0																																		
+leave-one-donor-out sensitivity										True					-4.515822428172477	0.0109346084977145	113.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	114.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	115.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	116.0																																		
+leave-one-donor-out sensitivity										True					-4.515822514812003	0.0109346075503452	117.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	118.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	119.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	120.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	121.0																																		
+leave-one-donor-out sensitivity										True					-4.448657510442251	0.0116942558533271	122.0																																		
+leave-one-donor-out sensitivity										True					-4.409172192803402	0.0121652446399194	123.0																																		
+leave-one-donor-out sensitivity										True					-4.4486578325464246	0.0116942520865591	124.0																																		
+leave-one-donor-out sensitivity										True					-4.409170520214471	0.01216526498739	125.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	126.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	127.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	128.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	129.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	130.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	131.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	132.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	133.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	134.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	135.0																																		
+leave-one-donor-out sensitivity										True					-4.448658498793981	0.0116942442952948	136.0																																		
+leave-one-donor-out sensitivity										True					-5.770975035401921	0.0031167171226288	137.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	138.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	139.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	140.0																																		
+leave-one-donor-out sensitivity										True					-4.409171482905853	0.0121652532759998	141.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	142.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	143.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	144.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	145.0																																		
+leave-one-donor-out sensitivity										True					-4.448659300737934	0.01169423491717	146.0																																		
+count concordance																																											GTEX-11DXW-0011-R3b-SM-DNZZE	33.0	42.0						
+count concordance																																											GTEX-11DZ1-0011-R3a-SM-DNZYY	36.0	50.0						
+count concordance																																											GTEX-11GSO-0011-R3b-SM-57WB2	36.0	46.0						
+count concordance																																											GTEX-11GSP-0011-R3a-SM-9QEGF	16.0	22.0						
+count concordance																																											GTEX-11UD1-0011-R3a-SM-5BC6S	16.0	25.0						
+count concordance																																											GTEX-11WQC-0011-R3a-SM-DO11T	9.0	12.0						
+count concordance																																											GTEX-11WQK-0011-R3b-SM-DO93K	38.0	45.0						
+count concordance																																											GTEX-11ZTS-0011-R3a-SM-5BC78	16.0	21.0						
+count concordance																																											GTEX-11ZVC-0011-R3a-SM-5BC6V	33.0	43.0						
+count concordance																																											GTEX-12WSC-0011-R3a-SM-5P9F1	40.0	58.0						
+count concordance																																											GTEX-12WSD-0011-R3b-SM-5LZWN	5.0	9.0						
+count concordance																																											GTEX-12WSF-0011-R3a-SM-5DUW7	23.0	33.0						
+count concordance																																											GTEX-12WSM-0011-R3b-SM-5LZWI	24.0	46.0						
+count concordance																																											GTEX-12ZZW-0011-R3a-SM-5DUWW	14.0	18.0						
+count concordance																																											GTEX-12ZZX-0011-R3b-SM-5EGLH	44.0	65.0						
+count concordance																																											GTEX-12ZZZ-0011-R3b-SM-5DUXK	31.0	53.0						
+count concordance																																											GTEX-13112-0011-R3b-SM-5HL9L	12.0	19.0						
+count concordance																																											GTEX-1313W-0011-R3a-SM-5EGLI	58.0	77.0						
+count concordance																																											GTEX-131XH-0011-R3b-SM-5DUWM	33.0	47.0						
+count concordance																																											GTEX-131YS-0011-R3b-SM-5DUXB	17.0	24.0						
+count concordance																																											GTEX-139T8-0011-R3b-SM-5HL4R	11.0	23.0						
+count concordance																																											GTEX-139TT-0011-R3b-SM-5K7VL	22.0	43.0						
+count concordance																																											GTEX-13CF2-0011-R3b-SM-5LZZ6	21.0	36.0						
+count concordance																																											GTEX-13CIG-0011-R3b-SM-5K7XF	12.0	19.0						
+count concordance																																											GTEX-13CZV-0011-R3a-SM-5KM27	33.0	48.0						
+count concordance																																											GTEX-13FHO-0011-R3b-SM-5K7YA	57.0	79.0						
+count concordance																																											GTEX-13FLV-0011-R3b-SM-5LZYP	15.0	22.0						
+count concordance																																											GTEX-13IVO-0011-R3b-SM-5IJBJ	28.0	40.0						
+count concordance																																											GTEX-13JVG-0011-R3b-SM-5LZXF	29.0	35.0						
+count concordance																																											GTEX-13N1W-0011-R3a-SM-5MR5E	39.0	60.0						
+count concordance																																											GTEX-13N2G-0011-R3b-SM-5MR5G	47.0	71.0						
+count concordance																																											GTEX-13NYB-0011-R3b-SM-A9SM4	31.0	49.0						
+count concordance																																											GTEX-13NYS-0011-R3b-SM-5MR41	73.0	99.0						
+count concordance																																											GTEX-13O3O-0011-R3b-SM-5KM3R	26.0	31.0						
+count concordance																																											GTEX-13O3Q-0011-R3a-SM-5P9H3	82.0	114.0						
+count concordance																																											GTEX-13OVH-0011-R3a-SM-5KM49	16.0	22.0						
+count concordance																																											GTEX-13OVL-0011-R3b-SM-5L3I8	27.0	40.0						
+count concordance																																											GTEX-13OW5-0011-R3a-SM-5L3I5	19.0	26.0						
+count concordance																																											GTEX-13OW7-0011-R3a-SM-5O9DA	31.0	47.0						
+count concordance																																											GTEX-13OW8-0011-R3a-SM-5L3I4	32.0	45.0						
+count concordance																																											GTEX-13PLJ-0011-R3a-SM-5O9DT	13.0	18.0						
+count concordance																																											GTEX-13PVQ-0011-R3b-SM-5O9D6	34.0	52.0						
+count concordance																																											GTEX-13QIC-0011-R3a-SM-5P9HT	44.0	57.0						
+count concordance																																											GTEX-13RTJ-0011-R3a-SM-5PNX7	52.0	64.0						
+count concordance																																											GTEX-13RTL-0011-R3a-SM-5P9JP	28.0	35.0						
+count concordance																																											GTEX-13S7M-0011-R3a-SM-5PNX2	41.0	53.0						
+count concordance																																											GTEX-13SLW-0011-R3b-SM-5SI6Y	31.0	48.0						
+count concordance																																											GTEX-13VXU-0011-R3b-SM-5O9CU	48.0	68.0						
+count concordance																																											GTEX-13X6I-0011-R3b-SM-5P9HM	52.0	74.0						
+count concordance																																											GTEX-13X6J-0011-R3b-SM-5P9K5	77.0	94.0						
+count concordance																																											GTEX-13X6K-0011-R3b-SM-5PNUD	38.0	47.0						
+count concordance																																											GTEX-1445S-0011-R3a-SM-5P9HY	51.0	67.0						
+count concordance																																											GTEX-144GL-0011-R3a-SM-5P9HP	62.0	78.0						
+count concordance																																											GTEX-145LS-0011-R3a-SM-5S2VJ	28.0	43.0						
+count concordance																																											GTEX-145LU-0011-R3a-SM-5P9K2	35.0	49.0						
+count concordance																																											GTEX-145MG-0011-R3b-SM-5SI67	16.0	19.0						
+count concordance																																											GTEX-145MH-0011-R3b-SM-5P9JQ	74.0	92.0						
+count concordance																																											GTEX-1477Z-0011-R3b-SM-5PNX9	27.0	32.0						
+count concordance																																											GTEX-148VJ-0011-R3b-SM-69LQJ	14.0	23.0						
+count concordance																																											GTEX-14BIM-0011-R3b-SM-5S2RL	29.0	34.0						
+count concordance																																											GTEX-14BIN-0011-R3b-SM-6AJBL	30.0	44.0						
+count concordance																																											GTEX-14BMV-0011-R3a-SM-5ZZU7	15.0	20.0						
+count concordance																																											GTEX-14C39-0011-R3b-SM-5YYA3	47.0	62.0						
+count concordance																																											GTEX-14DAQ-0011-R3b-SM-5YYAJ	30.0	40.0						
+count concordance																																											GTEX-14E7W-0011-R3b-SM-5YYB5	37.0	50.0						
+count concordance																																											GTEX-14JG1-0011-R3a-SM-62LEC	46.0	69.0						
+count concordance																																											GTEX-14JIY-0011-R3a-SM-5YYAQ	33.0	46.0						
+count concordance																																											GTEX-14LLW-0011-R3b-SM-62LFW	57.0	79.0						
+count concordance																																											GTEX-14LZ3-0011-R3a-SM-664NQ	23.0	31.0						
+count concordance																																											GTEX-14PJM-0011-R3b-SM-5ZZV9	27.0	36.0						
+count concordance																																											GTEX-14PJO-0011-R3a-SM-6AJBY	23.0	30.0						
+count concordance																																											GTEX-14PN4-0011-R3b-SM-686ZU	47.0	65.0						
+count concordance																																											GTEX-14PQA-0011-R3b-SM-69LQO	38.0	51.0						
+count concordance																																											GTEX-15CHQ-0011-R3b-SM-686ZY	48.0	62.0						
+count concordance																																											GTEX-15DCD-0011-R3b-SM-D4P1P	39.0	52.0						
+count concordance																																											GTEX-15DYW-0011-R3b-SM-6LPIM	15.0	25.0						
+count concordance																																											GTEX-15EO6-0011-R3b-SM-7KUDY	62.0	83.0						
+count concordance																																											GTEX-15ER7-0011-R3a-SM-6LPIK	51.0	74.0						
+count concordance																																											GTEX-15G19-0011-R3a-SM-6LPIG	46.0	68.0						
+count concordance																																											GTEX-15SHU-0011-R3a-SM-7IGPS	32.0	36.0						
+count concordance																																											GTEX-16XZZ-0011-R3a-SM-7IGLH	43.0	63.0						
+count concordance																																											GTEX-16YQH-0011-R3a-SM-7EPGM	42.0	64.0						
+count concordance																																											GTEX-17EVP-0011-R3a-SM-7EPI9	59.0	93.0						
+count concordance																																											GTEX-17EVQ-0011-R3b-SM-7LT9B	36.0	46.0						
+count concordance																																											GTEX-17F97-0011-R3b-SM-7LT9E	22.0	28.0						
+count concordance																																											GTEX-17HHY-0011-R3a-SM-7EWDK	21.0	31.0						
+count concordance																																											GTEX-17HII-0011-R3a-SM-7LT9D	25.0	41.0						
+count concordance																																											GTEX-18A6Q-0011-R3a-SM-718A7	34.0	51.0						
+count concordance																																											GTEX-1A3MX-0011-R3b-SM-79OOW	27.0	45.0						
+count concordance																																											GTEX-1B8L1-0011-R3a-SM-7EPIO	59.0	88.0						
+count concordance																																											GTEX-1B933-0011-R3b-SM-7P8PL	54.0	80.0						
+count concordance																																											GTEX-1B996-0011-R3b-SM-9QEGY	61.0	87.0						
+count concordance																																											GTEX-1BAJH-0011-R3a-SM-7IGNU	17.0	31.0						
+count concordance																																											GTEX-1C6WA-0011-R3a-SM-9OSVP	31.0	39.0						
+count concordance																																											GTEX-1CB4G-0011-R3a-SM-CE6QQ	28.0	37.0						
+count concordance																																											GTEX-1CB4H-0011-R3b-SM-9OSVI	61.0	88.0						
+count concordance																																											GTEX-1E1VI-0011-R3a-SM-9OSWH	17.0	26.0						
+count concordance																																											GTEX-1EH9U-0011-R3b-SM-CL534	18.0	32.0						
+count concordance																																											GTEX-1EMGI-0011-R3b-SM-CE6R9	47.0	68.0						
+count concordance																																											GTEX-1EN7A-0011-R3a-SM-9OSVT	24.0	32.0						
+count concordance																																											GTEX-1EU9M-0011-R3a-SM-9QEHY	20.0	31.0						
+count concordance																																											GTEX-1EX96-0011-R3b-SM-ARZMH	21.0	27.0						
+count concordance																																											GTEX-1F48J-0011-R3b-SM-9OSVY	70.0	85.0						
+count concordance																																											GTEX-1F52S-0011-R3a-SM-CKZNI	28.0	32.0						
+count concordance																																											GTEX-1F6I4-0011-R3a-SM-9QEH9	27.0	32.0						
+count concordance																																											GTEX-1F75A-0011-R3b-SM-ARL8K	28.0	34.0						
+count concordance																																											GTEX-1F7RK-0011-R3b-SM-9OSWJ	34.0	51.0						
+count concordance																																											GTEX-1GF9W-0011-R3b-SM-CJI2S	38.0	57.0						
+count concordance																																											GTEX-1GMR8-0011-R3b-SM-9QEIG	50.0	69.0						
+count concordance																																											GTEX-1GN73-0011-R3b-SM-9QEIL	37.0	56.0						
+count concordance																																											GTEX-1GTWX-0011-R3b-SM-CJI2Z	61.0	84.0						
+count concordance																																											GTEX-1GZ2Q-0011-R3a-SM-A96RP	33.0	52.0						
+count concordance																																											GTEX-1GZ4I-0011-R3b-SM-9OSWP	12.0	22.0						
+count concordance																																											GTEX-1H1ZS-0011-R3b-SM-CE6RS	67.0	85.0						
+count concordance																																											GTEX-1H23P-0011-R3b-SM-CL54S	62.0	89.0						
+count concordance																																											GTEX-1H2FU-0011-R3b-SM-CKZP4	21.0	28.0						
+count concordance																																											GTEX-1H3O1-0011-R3a-SM-ACKVD	38.0	51.0						
+count concordance																																											GTEX-1H3VE-0011-R3a-SM-CE6SK	10.0	14.0						
+count concordance																																											GTEX-1HB9E-0011-R3a-SM-ARL7D	33.0	38.0						
+count concordance																																											GTEX-1HBPH-0011-R3a-SM-A96RY	21.0	26.0						
+count concordance																																											GTEX-1HCU6-0011-R3a-SM-ARU75	28.0	38.0						
+count concordance																																											GTEX-1HFI6-0011-R3b-SM-A9SKB	59.0	94.0						
+count concordance																																											GTEX-1HGF4-0011-R3b-SM-CL54W	28.0	34.0						
+count concordance																																											GTEX-1HR98-0011-R3b-SM-A9G1U	15.0	20.0						
+count concordance																																											GTEX-1HUB1-0011-R3b-SM-CKZOX	29.0	38.0						
+count concordance																																											GTEX-1I1GR-0011-R3a-SM-CM2T4	39.0	56.0						
+count concordance																																											GTEX-1I1GS-0011-R3b-SM-CYPS7	40.0	55.0						
+count concordance																																											GTEX-1I1GV-0011-R3a-SM-CL557	32.0	52.0						
+count concordance																																											GTEX-1IDJH-0011-R3a-SM-CJI42	56.0	77.0						
+count concordance																																											GTEX-1IKJJ-0011-R3b-SM-C1YRW	65.0	93.0						
+count concordance																																											GTEX-1IKK5-0011-R3b-SM-C1YRY	20.0	24.0						
+count concordance																																											GTEX-1J1OQ-0011-R3b-SM-D4P2B	43.0	76.0						
+count concordance																																											GTEX-1J8EW-0011-R3a-SM-ARU8A	27.0	32.0						
+count concordance																																											GTEX-1J8Q2-0011-R3b-SM-ACKVG	36.0	52.0						
+count concordance																																											GTEX-1JJEA-0011-R3b-SM-EXUTD	31.0	42.0						
+count concordance																																											GTEX-1JMOU-0011-R3a-SM-EYYXN	59.0	81.0						
+count concordance																																											GTEX-1JMPZ-0011-R3a-SM-EYYWX	23.0	49.0						
+count concordance																																											GTEX-1KD4Q-0011-R3b-SM-EXOID	16.0	21.0						
+count concordance																																											GTEX-1LVAO-0011-R3a-SM-EXOI7	63.0	94.0						
+count concordance																																											GTEX-1MCQQ-0011-R3a-SM-EXURW	11.0	15.0						
+count concordance																																											GTEX-1N2EE-0011-R3b-SM-EXURY	41.0	52.0						
+count concordance																																											GTEX-N7MS-0011-R3a-SM-33HC6	101.0	153.0						
+count concordance																																											GTEX-N7MT-0011-R3a-SM-2I3GC	25.0	32.0						
+count concordance																																											GTEX-NL3H-0011-R3a-SM-2I3GL	27.0	44.0						
+count concordance																																											GTEX-NPJ8-0011-R3a-SM-2HMIW	84.0	126.0						
+count concordance																																											GTEX-P44G-0011-R3A-SM-2I3FC	50.0	78.0						
+count concordance																																											GTEX-P44H-0011-R3A-SM-D3L8E	46.0	80.0						
+count concordance																																											GTEX-PVOW-0011-R3A-SM-32PKX	93.0	132.0						
+count concordance																																											GTEX-PWO3-0011-R3A-SM-2I5EX	32.0	41.0						
+count concordance																																											GTEX-Q2AG-0011-R3A-SM-2HMJ9	51.0	70.0						
+count concordance																																											GTEX-QDT8-0011-R3A-SM-32PKR	106.0	150.0						
+count concordance																																											GTEX-QVUS-0011-R3A-SM-3GAFD	28.0	44.0						
+count concordance																																											GTEX-RNOR-0011-R3A-SM-5SI8E	66.0	85.0						
+count concordance																																											GTEX-RVPV-0011-R3A-SM-2TF63	20.0	31.0						
+count concordance																																											GTEX-T2IS-0011-R3A-SM-32QPB	46.0	80.0						
+count concordance																																											GTEX-UTHO-0011-R3A-SM-3GIK8	12.0	15.0						
+count concordance																																											GTEX-WHSE-0011-R3A-SM-3P5ZM	73.0	99.0						
+count concordance																																											GTEX-WL46-0011-R3A-SM-3TW8E	58.0	85.0						
+count concordance																																											GTEX-WZTO-0011-R3B-SM-3NMC6	69.0	93.0						
+count concordance																																											GTEX-X4EP-0011-R3A-SM-3P626	115.0	170.0						
+count concordance																																											GTEX-X4XX-0011-R3B-SM-46MWK	26.0	36.0						
+count concordance																																											GTEX-X4XY-0011-R3B-SM-EXOHI	22.0	38.0						
+count concordance																																											GTEX-X585-0011-R3B-SM-46MVG	42.0	55.0						
+count concordance																																											GTEX-XLM4-0011-R3B-SM-4AT6E	56.0	78.0						
+count concordance																																											GTEX-XMD1-0011-R3B-SM-4AT5R	31.0	44.0						
+count concordance																																											GTEX-Y8DK-0011-R3A-SM-4RTW5	27.0	34.0						
+count concordance																																											GTEX-YFC4-0011-R3a-SM-4RGLP	46.0	66.0						
+count concordance																																											GTEX-YJ89-0011-R3b-SM-4V6EF	43.0	61.0						
+count concordance																																											GTEX-Z93S-0011-R3b-SM-4RGNH	36.0	55.0						
+count concordance																																											GTEX-ZAB4-0011-R3a-SM-4RGNQ	54.0	78.0						
+count concordance																																											GTEX-ZDXO-0011-R3a-SM-4WKFS	46.0	65.0						
+count concordance																																											GTEX-ZE9C-0011-R3a-SM-4WKGT	27.0	30.0						
+count concordance																																											GTEX-ZF28-0011-R3a-SM-4WWDA	28.0	44.0						
+count concordance																																											GTEX-ZUA1-0011-R3a-SM-4YCEE	25.0	41.0						
+count concordance																																											GTEX-ZVT3-0011-R3b-SM-51MTJ	17.0	23.0						
+count concordance																																											GTEX-ZVZQ-0011-R3a-SM-57WC7	17.0	26.0						

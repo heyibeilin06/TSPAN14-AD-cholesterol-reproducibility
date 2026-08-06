@@ -1,0 +1,5 @@
+trait	pph4	mr_status
+AD	0.990857886443657	robust
+TC	0.97705398860426	robust
+LDL-C	0.958888926242983	robust
+non-HDL-C	0.959844824231557	sensitivity flag

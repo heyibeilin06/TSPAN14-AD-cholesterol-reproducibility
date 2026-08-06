@@ -1,0 +1,9 @@
+Stage	Trait pair	Primary result	Robustness analysis	Biological interpretation
+Genome-wide screening	AD–HDL-C	Genetic correlation = 0.1394 (SE = 0.0436); P = 0.0014	Extended-APOE LD conditioning: correlation = 0.1155 (own lead) and 0.1181 (pair union), both P = 0.0002; ±5-Mb exclusion: correlation = 0.1059, P = 0.0001	The AD–HDL-C correlation is sensitive to, but not fully explained by, the extended APOE association block.
+Genome-wide screening	AD–LDL-C	Genetic correlation = −0.0227 (SE = 0.0310); P = 0.4629	No significant genome-wide correlation	Not prioritized by the global screen.
+Genome-wide screening	AD–TG	Genetic correlation = −0.0351 (SE = 0.0320); P = 0.2739	No significant genome-wide correlation	Not prioritized by the global screen.
+Genome-wide screening	AD–TC	Genetic correlation = −0.0054 (SE = 0.0344); P = 0.8741	No significant genome-wide correlation	Not prioritized by the global screen.
+Genome-wide screening	AD–non-HDL-C	Genetic correlation = −0.0638 (SE = 0.0399); P = 0.1093	No significant genome-wide correlation	Not prioritized by the global screen.
+TSPAN14 locus	AD–TC	Regional PP.H4 = 0.9757	coloc.susie PP.H4 = 0.9587; HyPrColoc = 0.9413; canonical exon5–6 sQTL PP.H4 = 0.9771	Most prior-robust local convergence, with the canonical TSPAN14 branch as a candidate molecular readout.
+TSPAN14 locus	AD–LDL-C	Regional PP.H4 = 0.9619	coloc.susie PP.H4 = 0.9507; HyPrColoc = 0.9099; canonical exon5–6 sQTL PP.H4 = 0.9589	High default-prior support, but sensitive to a tenfold lower shared-signal prior.
+TSPAN14 locus	AD–non-HDL-C	Regional PP.H4 = 0.9586	coloc.susie PP.H4 = 0.9571; HyPrColoc = 0.9025; canonical exon5–6 sQTL PP.H4 = 0.9598	High default-prior support, but sensitive to a tenfold lower shared-signal prior.

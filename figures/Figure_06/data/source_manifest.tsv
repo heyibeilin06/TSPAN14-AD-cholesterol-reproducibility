@@ -1,0 +1,8 @@
+artifact	role
+Figure_6_nodes.tsv	Mechanism-model nodes and evidence classes
+Figure_6_edges.tsv	Directed evidence and prediction edges
+Figure_6_replication_summary.tsv	Four-tissue exact-event replication summary
+Figure_6_structure_summary.tsv	EC2 structural-confidence summary
+Figure_6_claim_boundaries.tsv	Supported-claim and boundary ledger
+Figure_6_causal_scope.tsv	MR causal-scope guardrail
+Figure_6_cell_context_scope.tsv	Cell-attribution guardrail

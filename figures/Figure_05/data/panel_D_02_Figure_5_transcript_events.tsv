@@ -1,0 +1,4 @@
+transcript_id	event	junction_coordinates	structural_status	protein_transition	interpretation
+"ENST00000429989"	"project_exon5_exon6"	"chr10:80509471-80512144"	"canonical_chain_member"	"AA150/151"	"Canonical transcript contains exon5 followed by exon6."
+"ENST00000429989"	"adjacent_exon6_exon7"	"chr10:80512269-80514018"	"canonical_chain_member"	"AA192/193"	"Canonical transcript contains exon6 followed by exon7; coordinate end is LeafCutter/BED convention one base before exon7 start."
+"ENST00000429989"	"hypothetical_exon5_exon7_skip"	"chr10:80509471-80514019"	"not_observed_in_current_inputs"	"exon6_length_nt=126; mod3=0"	"Skipping coding exon6 would be in-frame by length alone; this does not demonstrate that exon5-exon7 skipping occurs or excludes other NMD mechanisms."

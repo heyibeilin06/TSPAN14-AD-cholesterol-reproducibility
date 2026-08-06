@@ -1,0 +1,9 @@
+artifact	role
+Figure_3_exact_replication_matrix.tsv	Six-variant by four-tissue exact-event replication
+Figure_3_ba24_donor_ier.tsv	BA24 donor-level raw IER and genotype
+Figure_3_depth_sensitivity_delta_ier.tsv	Read-depth sensitivity of DeltaIER
+Figure_3_alignment_metric_audit.tsv	Allele-orientation and metric audit
+Figure_3_brain_junction_counts.tsv	GTEx brain exon5-6 and exon6-7 junction counts
+Figure_3_brain_cousage_summary.tsv	Brain-region junction co-usage summary
+Figure_3_primary_exons.tsv	GENCODE v38 exons 5-7 of ENST00000429989
+Figure_3_splice_events.tsv	Coordinate-audited exact, competing and adjacent splice events

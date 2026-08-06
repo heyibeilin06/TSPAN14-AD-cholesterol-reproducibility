@@ -1,0 +1,11 @@
+asset	decision	rationale
+Figure 1	Revised	Panel B now labels the displayed regional posterior as default-prior PP.H4.
+Figure 2	Revised	Panel C now labels all displayed canonical-branch probabilities as default-prior PP.H4.
+Figure 3	Retained	Quantitative panels are unchanged; the legend states that GTEx tissues overlap partially and represent cross-tissue consistency.
+Figure 4	Revised	Panel C now labels the colocalization diagnostic as default-prior PP.H4.
+Figure 5	Revised	Bulk neural evidence is described as cross-tissue consistency rather than independent replication.
+Figure 6	Revised	The summary model replaces independent replication with cross-tissue consistency and displays both default and p12/10 PP.H4 values.
+Tables 1-2	Retained	Both tables already distinguish prior-robust from prior-sensitive results and bound cis-MR interpretation.
+Supplementary Figures S1-S9	Retained	The figures match the Round 7 evidence hierarchy; S3C is explicitly default-prior.
+Supplementary Tables S1-S19	Rebuilt	S1-S19 remain synchronized; local development paths in S2 were replaced by SLM_DATA_ROOT-relative paths.
+Supplementary Information	Retained	Round 7 legends and methods remain aligned with the manuscript and workbook.

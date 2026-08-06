@@ -1,0 +1,8 @@
+artifact	role
+Figure_5_cell_context_atlas.tsv	Evidence-layer by cell-context atlas
+Figure_5_exact_event_cross_context.tsv	Lead-variant exact exon5-6 sQTL across isolated microglia and bulk neural tissues
+Figure_5_single_nucleus_eqtl.tsv	Lead-risk-allele single-nucleus TSPAN14 eQTL estimates
+Figure_5_disease_state_rna.tsv	Adjusted disease-state RNA and cross-study single-cell meta-analysis
+Figure_5_ec2_structure.tsv	Residue-level EC2 secondary structure and AlphaFold confidence
+Figure_5_transcript_events.tsv	Exact and adjacent transcript-event coordinate audit
+Figure_5_structure_summary.tsv	AA150-193 structural-context summary

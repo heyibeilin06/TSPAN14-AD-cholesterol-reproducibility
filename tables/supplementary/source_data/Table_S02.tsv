@@ -1,0 +1,67 @@
+analysis_block	model	comparison	status	rg	se	p	analysis_class	scope	conditioned_trait	anchor_trait	anchor_snp	selected_snp	r2_to_anchor	trait	conditioning_signals	max_abs_z_before	max_abs_z_after_stable_variants	significant_before	significant_after_stable_variants	low_conditional_variance_removed	conditioned_sumstats
+LD-conditioned LDSC	own_lead	AD-HDL	completed	0.1155	0.0306	0.0002															
+LD-conditioned LDSC	own_lead	AD-LDL	completed	-0.0504	0.0494	0.3082															
+LD-conditioned LDSC	own_lead	AD-TG	completed	-0.0488	0.0326	0.1344															
+LD-conditioned LDSC	own_lead	AD-TC	completed	0.0242	0.0322	0.4525															
+LD-conditioned LDSC	own_lead	AD-nonHDL	completed	-0.0339	0.0337	0.3137															
+LD-conditioned LDSC	pair_union_leads	AD-HDL	completed	0.1181	0.0314	0.0002															
+LD-conditioned LDSC	pair_union_leads	AD-LDL	completed	-0.0751	0.0703	0.285															
+LD-conditioned LDSC	pair_union_leads	AD-TG	completed	-0.0463	0.0319	0.1466															
+LD-conditioned LDSC	pair_union_leads	AD-TC	completed	0.0041	0.0318	0.8975															
+LD-conditioned LDSC	pair_union_leads	AD-nonHDL	completed	-0.0534	0.0358	0.1358															
+extended-window sensitivity	baseline	AD-HDL		0.1394	0.0436	0.0014	baseline	unmodified genome-wide statistics													
+extended-window sensitivity	w1Mb	AD-HDL		0.1068	0.029	0.0002	physical-window sensitivity	APOE lead-anchor window exclusion													
+extended-window sensitivity	w2Mb	AD-HDL		0.1063	0.0284	0.0002	physical-window sensitivity	APOE lead-anchor window exclusion													
+extended-window sensitivity	w5Mb	AD-HDL		0.1059	0.0278	0.0001	physical-window sensitivity	APOE lead-anchor window exclusion													
+extended-window sensitivity	own_lead	AD-HDL		0.1155	0.0306	0.0002	LD-based summary conditional analysis	GRCh37 LDetect APOE block conditioned on pre-specified observed lead signal(s)													
+extended-window sensitivity	pair_union_leads	AD-HDL		0.1181	0.0314	0.0002	LD-based summary conditional analysis	GRCh37 LDetect APOE block conditioned on pre-specified observed lead signal(s)													
+conditioning variants	own_lead	AD-HDL	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	own_lead	AD-HDL	exact						HDL	HDL	rs4420638	rs4420638	1.0								
+conditioning variants	pair_union_leads	AD-HDL	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-HDL	below_r2_threshold						AD	HDL	rs4420638	rs183610051	0.0357120714241428								
+conditioning variants	pair_union_leads	AD-HDL	exact						HDL	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-HDL	exact						HDL	HDL	rs4420638	rs4420638	1.0								
+conditioning variants	own_lead	AD-LDL	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	own_lead	AD-LDL	exact						LDL	LDL	rs445925	rs445925	1.0								
+conditioning variants	pair_union_leads	AD-LDL	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-LDL	exact						AD	LDL	rs445925	rs445925	1.0								
+conditioning variants	pair_union_leads	AD-LDL	exact						LDL	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-LDL	exact						LDL	LDL	rs445925	rs445925	1.0								
+conditioning variants	own_lead	AD-TG	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	own_lead	AD-TG	exact						TG	TG	rs5117	rs5117	1.0								
+conditioning variants	pair_union_leads	AD-TG	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-TG	below_r2_threshold						AD	TG	rs5117	rs445925	0.3869427738855477								
+conditioning variants	pair_union_leads	AD-TG	exact						TG	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-TG	exact						TG	TG	rs5117	rs5117	1.0								
+conditioning variants	own_lead	AD-TC	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	own_lead	AD-TC	exact						TC	TC	rs4420638	rs4420638	1.0								
+conditioning variants	pair_union_leads	AD-TC	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-TC	below_r2_threshold						AD	TC	rs4420638	rs183610051	0.0357120714241428								
+conditioning variants	pair_union_leads	AD-TC	exact						TC	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-TC	exact						TC	TC	rs4420638	rs4420638	1.0								
+conditioning variants	own_lead	AD-nonHDL	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	own_lead	AD-nonHDL	exact						nonHDL	nonHDL	rs4420638	rs4420638	1.0								
+conditioning variants	pair_union_leads	AD-nonHDL	exact						AD	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-nonHDL	below_r2_threshold						AD	nonHDL	rs4420638	rs183610051	0.0357120714241428								
+conditioning variants	pair_union_leads	AD-nonHDL	exact						nonHDL	AD	rs7254892	rs7254892	1.0								
+conditioning variants	pair_union_leads	AD-nonHDL	exact						nonHDL	nonHDL	rs4420638	rs4420638	1.0								
+residual QC	own_lead	AD-HDL												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_HDL/AD.sumstats.gz
+residual QC	own_lead	AD-HDL												HDL	1.0	41.064390293327925	28.5649227685965	100.0	62.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_HDL/HDL.sumstats.gz
+residual QC	pair_union_leads	AD-HDL												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_HDL/AD.sumstats.gz
+residual QC	pair_union_leads	AD-HDL												HDL	2.0	41.064390293327925	28.715890027541327	100.0	81.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_HDL/HDL.sumstats.gz
+residual QC	own_lead	AD-LDL												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_LDL/AD.sumstats.gz
+residual QC	own_lead	AD-LDL												LDL	1.0	139.71576748920637	130.15285387916097	335.0	211.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_LDL/LDL.sumstats.gz
+residual QC	pair_union_leads	AD-LDL												AD	2.0	19.15925925925925	19.78753574042665	90.0	88.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_LDL/AD.sumstats.gz
+residual QC	pair_union_leads	AD-LDL												LDL	2.0	139.71576748920637	117.34816360715124	335.0	243.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_LDL/LDL.sumstats.gz
+residual QC	own_lead	AD-TG												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_TG/AD.sumstats.gz
+residual QC	own_lead	AD-TG												TG	1.0	57.88532411679906	29.04960567452455	108.0	56.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_TG/TG.sumstats.gz
+residual QC	pair_union_leads	AD-TG												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_TG/AD.sumstats.gz
+residual QC	pair_union_leads	AD-TG												TG	2.0	57.88532411679906	28.84441475723266	108.0	52.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_TG/TG.sumstats.gz
+residual QC	own_lead	AD-TC												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_TC/AD.sumstats.gz
+residual QC	own_lead	AD-TC												TC	1.0	93.29585627354388	96.9636940834934	264.0	205.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_TC/TC.sumstats.gz
+residual QC	pair_union_leads	AD-TC												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_TC/AD.sumstats.gz
+residual QC	pair_union_leads	AD-TC												TC	2.0	93.29585627354388	69.00948773178533	264.0	206.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_TC/TC.sumstats.gz
+residual QC	own_lead	AD-nonHDL												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_nonHDL/AD.sumstats.gz
+residual QC	own_lead	AD-nonHDL												nonHDL	1.0	100.7022054238654	102.63650362906318	268.0	231.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/own_lead/AD_nonHDL/nonHDL.sumstats.gz
+residual QC	pair_union_leads	AD-nonHDL												AD	1.0	19.15925925925925	17.836084323835433	90.0	85.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_nonHDL/AD.sumstats.gz
+residual QC	pair_union_leads	AD-nonHDL												nonHDL	2.0	100.7022054238654	73.60839616948111	268.0	229.0	0.0	${SLM_DATA_ROOT}/p0_ldsc/apoe_conditional_reanalysis/conditional/pair_union_leads/AD_nonHDL/nonHDL.sumstats.gz

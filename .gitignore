@@ -1,0 +1,7 @@
+data/raw/
+reproduced/
+*.log
+.Rhistory
+.RData
+__pycache__/
+.pytest_cache/

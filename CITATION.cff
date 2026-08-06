@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated manuscript."
+title: "TSPAN14 AD-cholesterol reproducibility package"
+type: software
+authors:
+  - family-names: Yang
+    given-names: Xinpeng
+  - family-names: Shui
+    given-names: Xindong
+version: "1.2.0"
+date-released: "2026-08-07"
+license: MIT

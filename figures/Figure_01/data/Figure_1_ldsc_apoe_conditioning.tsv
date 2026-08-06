@@ -1,0 +1,9 @@
+comparison	rg	se	p	analysis_class	model	scope	trait	trait_label	display_label	analysis_group	lo	hi	display_order
+AD-HDL	0.1394	0.0436	0.0014	Genome-wide baseline	baseline	Unmodified genome-wide statistics	HDL	HDL-C	AD–HDL-C	Genome-wide LDSC	0.053944	0.224856	1
+AD-LDL	-0.0227	0.031	0.4629	Genome-wide baseline	baseline	Unmodified genome-wide statistics	LDL	LDL-C	AD–LDL-C	Genome-wide LDSC	-0.08346	0.03806	2
+AD-TG	-0.0351	0.032	0.2739	Genome-wide baseline	baseline	Unmodified genome-wide statistics	TG	TG	AD–TG	Genome-wide LDSC	-0.09782	0.02762	3
+AD-TC	-0.0054	0.0344	0.8741	Genome-wide baseline	baseline	Unmodified genome-wide statistics	TC	TC	AD–TC	Genome-wide LDSC	-0.072824	0.062024	4
+AD-nonHDL	-0.0638	0.0399	0.1093	Genome-wide baseline	baseline	Unmodified genome-wide statistics	nonHDL	non-HDL-C	AD–non-HDL-C	Genome-wide LDSC	-0.142004	0.014404	5
+AD-HDL	0.1155	0.0306	2e-04	LD-based summary conditional analysis	own_lead	GRCh37 LDetect APOE block conditioned on pre-specified observed lead signal(s)	HDL	HDL-C	AD–HDL-C | LD-conditioned, trait leads	Extended-APOE sensitivity	0.055524	0.175476	6
+AD-HDL	0.1181	0.0314	2e-04	LD-based summary conditional analysis	pair_union_leads	GRCh37 LDetect APOE block conditioned on pre-specified observed lead signal(s)	HDL	HDL-C	AD–HDL-C | LD-conditioned, union leads	Extended-APOE sensitivity	0.056556	0.179644	7
+AD-HDL	0.1059	0.0278	1e-04	physical-window sensitivity	w5Mb	APOE lead-anchor window exclusion	HDL	HDL-C	AD–HDL-C | ±5-Mb exclusion	Extended-APOE sensitivity	0.051412	0.160388	8

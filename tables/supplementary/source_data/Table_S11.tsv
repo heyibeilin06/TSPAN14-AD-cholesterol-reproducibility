@@ -1,0 +1,75 @@
+analysis_block	analysis	model	candidate_path	resource	lipid	exposure	outcome	method	n_instruments	n_pcs	estimate	se	p_value	conditional_F	indirect_estimate	indirect_se	indirect_p	attenuation_fraction	posterior_probability_indirect_positive	status	interpretation
+genome-wide bidirectional MR	genomewide_bidirectional					AD	TC	multiplicative random-effects IVW	64.0		0.153787191883098	0.0318804001665274	1.4079287131707474e-06								
+genome-wide bidirectional MR	genomewide_bidirectional					AD	LDL	multiplicative random-effects IVW	64.0		0.2136348153114572	0.0463158882354199	3.977396019871904e-06								
+genome-wide bidirectional MR	genomewide_bidirectional					AD	nonHDL	multiplicative random-effects IVW	64.0		0.1942211295577001	0.0400591023556491	1.2448351793814538e-06								
+genome-wide bidirectional MR	genomewide_bidirectional					AD	HDL	multiplicative random-effects IVW	64.0		-0.0363791812248507	0.0120099252048425	0.0024528910362033								
+genome-wide bidirectional MR	genomewide_bidirectional					AD	TG	multiplicative random-effects IVW	64.0		-0.0235995967145959	0.0145895189579659	0.1057548769291162								
+genome-wide bidirectional MR	genomewide_bidirectional					TC	AD	multiplicative random-effects IVW	700.0		0.0181104087410925	0.0291799571698812	0.5348329037704389								
+genome-wide bidirectional MR	genomewide_bidirectional					LDL	AD	multiplicative random-effects IVW	593.0		0.0109724647857521	0.030320916632915	0.717443395098665								
+genome-wide bidirectional MR	genomewide_bidirectional					nonHDL	AD	multiplicative random-effects IVW	547.0		-0.0033724827028659	0.0281333400902133	0.9045822093139996								
+genome-wide bidirectional MR	genomewide_bidirectional					HDL	AD	multiplicative random-effects IVW	805.0		0.1160556252607271	0.0251929515312466	4.091676902628905e-06								
+genome-wide bidirectional MR	genomewide_bidirectional					TG	AD	multiplicative random-effects IVW	692.0		-0.0535730339336886	0.0272167508617011	0.0490237996046422								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					AD	TC	multiplicative random-effects IVW	49.0		-0.0077516746919513	0.0067396236962748	0.2500761996123657								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					AD	LDL	multiplicative random-effects IVW	49.0		-0.0069577693465184	0.0070861472066384	0.3261573618012492								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					AD	nonHDL	multiplicative random-effects IVW	49.0		-0.0064357600647395	0.0069670975234369	0.355623689180516								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					AD	HDL	multiplicative random-effects IVW	49.0		0.0027060084397482	0.011837573310643	0.8191838182141393								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					AD	TG	multiplicative random-effects IVW	49.0		-0.0067158480843755	0.009088458511961	0.4599419250112603								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					TC	AD	multiplicative random-effects IVW	678.0		-0.0186576956340888	0.0278844178225829	0.503426390541641								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					LDL	AD	multiplicative random-effects IVW	567.0		-0.0332676143922181	0.0303450121491768	0.2729420660421195								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					nonHDL	AD	multiplicative random-effects IVW	525.0		-0.0415312904628911	0.0275924352822247	0.1322805189240292								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					HDL	AD	multiplicative random-effects IVW	796.0		0.1051696191012117	0.0249188650216423	2.437806174881985e-05								
+APOE sensitivity	genomewide_APOE_40_50Mb_excluded					TG	AD	multiplicative random-effects IVW	684.0		-0.0640148192304788	0.0267911428435766	0.0168758101592535								
+global lipid MVMR		LDL + HDL + TG -> AD				LDL			1327.0		0.0317950133520985	0.0301829763166745	0.292345866933726								
+global lipid MVMR		LDL + HDL + TG -> AD				HDL			1327.0		0.0455519147879465	0.0317830341443867	0.152032547897244								
+global lipid MVMR		LDL + HDL + TG -> AD				TG			1327.0		-0.0448926922014362	0.0347375413548953	0.196465146192462								
+local MVMR		exact_exon5_6_sQTL + TC -> AD				exact_exon5_6_sQTL			6.0		0.0277886038646018	0.0131079131698415	0.101343564924577	2.82904029521732						weak_conditional_instrument_do_not_interpret_direct_effect	
+local MVMR		exact_exon5_6_sQTL + TC -> AD				TC			6.0		3.6022034531673	1.81030760603538	0.117473563738223	3.24903676827919						weak_conditional_instrument_do_not_interpret_direct_effect	
+local MVMR		exact_exon5_6_sQTL + LDL -> AD				exact_exon5_6_sQTL			6.0		0.0271646151198432	0.0145435618029948	0.135173070807856	2.17603664371438						weak_conditional_instrument_do_not_interpret_direct_effect	
+local MVMR		exact_exon5_6_sQTL + LDL -> AD				LDL			6.0		3.66112532162655	2.03252412399533	0.146022395282886	2.6243051194777						weak_conditional_instrument_do_not_interpret_direct_effect	
+local MVMR		exact_exon5_6_sQTL + nonHDL -> AD				exact_exon5_6_sQTL			6.0		0.0273118342747377	0.0148940513029033	0.140615711120418	3.71370426981015						weak_conditional_instrument_do_not_interpret_direct_effect	
+local MVMR		exact_exon5_6_sQTL + nonHDL -> AD				nonHDL			6.0		3.07742048373181	1.76738921331751	0.156613837561376	3.06621712764975						weak_conditional_instrument_do_not_interpret_direct_effect	
+mediation identification gate			TC -> exact exon5-6 splicing -> AD											2.82904029521732				0.5752257496584174		not_identified	The genome-wide lipid total effect is not supported; strict local MVMR has only one sQTL instrument, and the six-variant relaxed model has conditional F below 10. The apparent coefficient attenuation compares different weak-instrument models and cannot be interpreted as mediation.
+mediation identification gate			LDL -> exact exon5-6 splicing -> AD											2.17603664371438				0.5847639888793541		not_identified	The genome-wide lipid total effect is not supported; strict local MVMR has only one sQTL instrument, and the six-variant relaxed model has conditional F below 10. The apparent coefficient attenuation compares different weak-instrument models and cannot be interpreted as mediation.
+mediation identification gate			nonHDL -> exact exon5-6 splicing -> AD											3.06621712764975				0.5825136093186921		not_identified	The genome-wide lipid total effect is not supported; strict local MVMR has only one sQTL instrument, and the six-variant relaxed model has conditional F below 10. The apparent coefficient attenuation compares different weak-instrument models and cannot be interpreted as mediation.
+minimum PC-GMM models	minimum identified PC-GMM				TC	Exact exon5-6 splice usage				3.0	0.0759615394741727	0.0167595285381238	5.83065378846997e-06	21.8624549975899						completed	
+minimum PC-GMM models	minimum identified PC-GMM				TC	TC				3.0	7.13724516262222	1.75246584424616	4.64738259787631e-05	10.7763439814553						completed	
+minimum PC-GMM models	minimum identified network first step				TC	TC				3.0	93.2032125110736	51.2650558635465	0.0690541726615781	11.4650624091582						completed	
+minimum PC-GMM models	minimum identified multivariable PC-GMM				TC	Exact exon5-6 splice usage				3.0	0.0544047216964117	0.0162385498594427	0.0008071137224284							completed	
+minimum PC-GMM models	minimum identified multivariable PC-GMM				TC	TC				3.0	2.19013395306199	1.37188647049142	0.110390670263489							completed	
+minimum PC-GMM models	minimum identified PC-GMM				LDL	Exact exon5-6 splice usage				3.0	0.0759615394741727	0.0167595285381238	5.83065378846997e-06	21.8624549975899						completed	
+minimum PC-GMM models	minimum identified PC-GMM				LDL	LDL				3.0	7.68241271995167	1.82064587268616	2.44726971734381e-05	9.3513412474894						completed	
+minimum PC-GMM models	minimum identified network first step				LDL	LDL				3.0	91.9754418023268	61.0080143853328	0.131657943077652	9.94893319330843						completed	
+minimum PC-GMM models	minimum identified multivariable PC-GMM				LDL	Exact exon5-6 splice usage				3.0	0.0544452233717565	0.0164339125305742	0.0009230758378565							completed	
+minimum PC-GMM models	minimum identified multivariable PC-GMM				LDL	LDL				3.0	2.48143835001264	1.56782081913011	0.113482827672986							completed	
+minimum PC-GMM models	minimum identified PC-GMM				nonHDL	Exact exon5-6 splice usage				3.0	0.0759615394741727	0.0167595285381238	5.83065378846997e-06	21.8624549975899						completed	
+minimum PC-GMM models	minimum identified PC-GMM				nonHDL	nonHDL				3.0	6.86337249162257	2.88480979796332	0.0173529842260977	9.68179691382299						completed	
+minimum PC-GMM models	minimum identified network first step				nonHDL	nonHDL				3.0	89.5159328718122	67.1537277360708	0.182531736365044	9.95026282158028						completed	
+minimum PC-GMM models	minimum identified multivariable PC-GMM				nonHDL	Exact exon5-6 splice usage				3.0	0.0573311315813779	0.0156633101857062	0.000252000652183							completed	
+minimum PC-GMM models	minimum identified multivariable PC-GMM				nonHDL	nonHDL				3.0	1.96152015814998	1.29702655264223	0.130452286923204							completed	
+PC-dimension sensitivity					TC					3.0	0.0544047216964117		0.0008071137224284	10.4555416337316	5.07069483787647	3.17324734124054	0.110053807131426	0.693140153776456	0.96509722409317	not confirmatory	
+PC-dimension sensitivity					TC					5.0	0.0538221734295142		0.000156122611659	6.07825209989551	2.00891386079931	2.2644112840308	0.3749883080947	-0.503093745849284	0.81923556439055	not confirmatory	
+PC-dimension sensitivity					TC					10.0	0.0554369987891427		0.006166426773744	3.73392850386074	1.96482469804176	1.31687641601476	0.135690170311816	0.398614295991387	0.959548192550925	not confirmatory	
+PC-dimension sensitivity					TC					15.0	0.043416630334491		0.0002803032113367	4.6440420648174	2.13715805888868	1.03116008159723	0.0382117184353765	0.467192212957539	0.994052785685279	not confirmatory	
+PC-dimension sensitivity					TC					20.0	0.0354205151223466		0.0032096419163678	3.70920973335947	1.55965711149458	0.765947168772724	0.041725626124179	0.28908191925161	0.995978195800747	not confirmatory	
+PC-dimension sensitivity					TC					25.0	0.0288400218377561		0.0111220713269744	3.17017537935961	1.40239000287814	0.708640261357326	0.0478174480169828	0.24330985977549	0.993656737692197	not confirmatory	
+PC-dimension sensitivity					TC					30.0	0.0338434696172847		0.0005871682353213	2.87478233670085	-0.044745735409188	0.273798695908108	0.870183292593037	0.255559791995887	0.435056974077379	not confirmatory	
+PC-dimension sensitivity					LDL					3.0	0.0544452233717565		0.0009230758378565	8.59667652210184	5.00762347364367	3.64933896377435	0.170001138734651	0.676997521420816	0.933770255675304	not confirmatory	
+PC-dimension sensitivity					LDL					5.0	0.051934590539208		0.0004934423496601	4.6709399253512	5.19345892589917	1.78099266685863	0.0035449670999243	-0.135543846307699	0.99975322911897	not confirmatory	
+PC-dimension sensitivity					LDL					10.0	0.0494789434863375		0.0210527933745844	2.93350836467801	-0.643232825074984	0.674810698309895	0.340486293577047	0.367285180157035	0.155031447991878	not confirmatory	
+PC-dimension sensitivity					LDL					15.0	0.0424915471452437		0.0009553542913886	3.81834319676128	-0.407928208060363	0.458798905985654	0.373937508177086	0.577961099203879	0.178261442221182	not confirmatory	
+PC-dimension sensitivity					LDL					20.0	0.0325571681330697		0.0103508802053239	2.98635483501239	1.58827187371866	0.821458535773109	0.053177360619964	0.500355908799922	0.993221719014798	not confirmatory	
+PC-dimension sensitivity					LDL					25.0	0.024680498051627		0.035102809149588	2.59875794719999	1.07215302016778	0.624723683743274	0.0861247889071041	0.264149189479145	0.980953969862957	not confirmatory	
+PC-dimension sensitivity					LDL					30.0	0.0323296172036533		0.001561657459399	2.52179154297776	1.12875577203213	0.522492871291261	0.0307473176027923	0.42468112203487	0.997671755794386	not confirmatory	
+PC-dimension sensitivity					nonHDL					3.0	0.0573311315813779		0.000252000652183	9.64500981321344	5.13204972610365	4.09736776837424	0.210379143367554	0.714204618714166	0.908631130549691	not confirmatory	
+PC-dimension sensitivity					nonHDL					5.0	0.0557275382433037		9.89339726218485e-05	5.36980471928237	2.05373415154185	2.44964867515656	0.401817846604682	-1.04195961741891	0.804667615118761	not confirmatory	
+PC-dimension sensitivity					nonHDL					10.0	0.054024770396955		0.0084245730693933	3.44519409839647	-0.491799694449252	0.576930798164902	0.393969153122573	0.406795229359201	0.186483533625596	not confirmatory	
+PC-dimension sensitivity					nonHDL					15.0	0.0443341732646743		0.0008744916778457	4.64371524968848	-0.601207716248456	0.594601264550928	0.31196343729347	0.581716375500496	0.144593468489569	not confirmatory	
+PC-dimension sensitivity					nonHDL					20.0	0.0332650384003422		0.0077933795869098	3.64814248123392	0.995785472743801	0.595788845634249	0.0946479982270081	0.385987820988315	0.980369380637449	not confirmatory	
+PC-dimension sensitivity					nonHDL					25.0	0.0257742059858829		0.0274914912100944	3.06118055099389	0.651570968901764	0.391069151185476	0.095688072315785	0.069443415296521	0.98093226492063	not confirmatory	
+PC-dimension sensitivity					nonHDL					30.0	0.0331449285859509		0.0010838226067036	2.92351890902235	0.727601606275896	0.365665479370065	0.0466128402208599	0.191900603771406	0.993401524580874	not confirmatory	
+PC-dimension summary					LDL					15.0	0.99975322911897										
+PC-dimension summary					nonHDL					16.0	0.993401524580874										
+PC-dimension summary					TC					15.0	0.995978195800747										
+trans-sQTL audit				BrainMeta brain-cortex trans-sQTL							0.0										TSPAN14 is not among the reported trans-sGenes
+trans-sQTL audit				GTEx v8 significant trans-sGenes							0.0										TSPAN14 is not among the FDR-significant trans-sGenes
+trans-sQTL audit				INTERVAL untargeted trans-sQTL P<1e-5							0.0										TSPAN14 trans hits exist, but none map to the exact exon5-6 event

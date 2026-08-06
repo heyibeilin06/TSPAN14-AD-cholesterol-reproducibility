@@ -1,0 +1,8 @@
+artifact	role
+Figure_4_instrument_effect_atlas.tsv	Risk-aligned effects of five correlated cis-sQTL instruments
+Figure_4_ld_aware_cis_mr.tsv	LD-aware and lead-instrument cis-MR
+Figure_4_cis_mr_diagnostics.tsv	Colocalization, directionality, strength and pleiotropy diagnostics
+Figure_4_genomewide_lipid_to_ad.tsv	Genome-wide lipid-to-AD MR with extended-APOE sensitivity
+Figure_4_global_joint_mvmr.tsv	Jointly clumped genome-wide lipid MVMR direct effects
+Figure_4_global_joint_mvmr_strength.tsv	MVMR conditional-strength sensitivity
+Figure_4_pc_gmm_dimension_sensitivity.tsv	Local PC-GMM attenuation and identification across PC dimensions

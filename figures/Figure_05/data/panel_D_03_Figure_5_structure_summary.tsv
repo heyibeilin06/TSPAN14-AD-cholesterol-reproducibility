@@ -1,0 +1,2 @@
+interval	mean_pLDDT	local_PAE_AA147_154	secondary_structure_counts	interpretation	claim_boundary
+"AA150-193"	90.46	0.875	"alpha_helix=2;coil=42"	"The AA150-193 interval is a high-confidence AlphaFold-derived structural context (mean pLDDT=90.460; local PAE=0.875) for interpreting the splice event."	"AlphaFold-derived secondary structure and confidence do not demonstrate altered isoform folding, membrane localization, ADAM10 binding or protein abundance."

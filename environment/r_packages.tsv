@@ -1,0 +1,15 @@
+package	role
+data.table	data input and transformation
+ggplot2	main and supplementary figures
+patchwork	multi-panel figure assembly
+ggrepel	non-overlapping labels
+scales	axis and legend formatting
+svglite	SVG export
+ragg	PNG/TIFF export
+coloc	pairwise colocalization
+susieR	fine-mapping and multiple-signal colocalization
+hyprcoloc	multi-trait colocalization
+MendelianRandomization	cis-MR
+MVMR	multivariable MR diagnostics
+limma	pseudobulk differential expression
+edgeR	count-model preprocessing

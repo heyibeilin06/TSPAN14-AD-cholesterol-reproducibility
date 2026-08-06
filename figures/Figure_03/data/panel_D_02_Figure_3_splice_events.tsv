@@ -1,0 +1,4 @@
+event	event_class	start_grch38	end_grch38	protein_transition	evidence
+"Canonical exon5-6"	"exact"	80509471	80512144	"AA150/151"	"Exact replicated sQTL"
+"Cryptic acceptor 1"	"competing"	80509471	80510106	NA	"Competing acceptor in LeafCutter cluster"
+"Adjacent exon6-7"	"adjacent"	80512269	80514018	"AA192/193"	"Co-used structural context"

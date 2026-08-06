@@ -1,0 +1,9 @@
+snp	snp_role	functional_priority_grade	functional_prior_score	manuscript_use_boundary	position_grch38	r2_to_rs7080009	coordinate_build
+"rs1870137"	"Laub_CRISPRi_anchor"	"highest_priority_functional_anchor"	18	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80510092	1	"GRCh38"
+"rs1870138"	"Laub_CRISPRi_anchor"	"highest_priority_functional_anchor"	16	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80509855	1	"GRCh38"
+"rs1870140"	"project_AD_lipid_sQTL_proxy"	"moderate_priority_supportive_variant"	8	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80486993	0.768765534809411	"GRCh38"
+"rs1902660"	"project_AD_lipid_sQTL_proxy"	"moderate_priority_supportive_variant"	9	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80503927	0.987107533888708	"GRCh38"
+"rs6586028"	"project_AD_lipid_sQTL_proxy"	"high_priority_regulatory_proxy"	11	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80494228	0.980610100822689	"GRCh38"
+"rs7080009"	"Laub_CRISPRi_anchor"	"highest_priority_functional_anchor"	16	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80509705	1	"GRCh38"
+"rs7096909"	"our_key_coloc_or_sqtl"	"context_variant"	4	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80524756	0.924582181749693	"GRCh38"
+"rs7922621"	"laub_extended"	"context_variant"	7	"Use as LD-block functional annotation and prioritization, not as single-SNP causal proof."	80491788	0.987107533888708	"GRCh38"

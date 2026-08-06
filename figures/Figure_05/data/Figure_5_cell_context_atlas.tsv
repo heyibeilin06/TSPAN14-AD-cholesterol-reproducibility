@@ -1,0 +1,8 @@
+evidence_layer	context	evidence_class	evidence_strength	interpretation
+"Exact exon5-6 sQTL"	"Microglia"	"Exact splice QTL"	4	"Cell-resolved genetic regulation"
+"Exact exon5-6 sQTL"	"Bulk neural tissue"	"Exact splice QTL"	3	"Cross-tissue consistency"
+"Total-expression eQTL"	"Excitatory neurons"	"Gene-expression QTL"	3	"Risk allele increases total expression"
+"Total-expression eQTL"	"Astrocytes"	"Gene-expression QTL"	3	"Risk allele increases total expression"
+"Adjusted AD-state RNA"	"Microglia"	"Disease-state test"	2	"No FDR-significant abundance shift"
+"Adjusted AD-state RNA"	"Excitatory neurons"	"Disease-state test"	2	"No FDR-significant abundance shift"
+"Published perturbation"	"Microglia"	"Perturbation"	3	"External regulatory and cellular anchor"

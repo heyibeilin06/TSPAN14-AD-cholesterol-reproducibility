@@ -1,0 +1,10 @@
+analysis_block	logFC	AveExpr	t	P.Value	adj.P.Val	B	gene	cell_group	contrast	n_comparator	n_high_ad	design_terms	logCPM	F	PValue	FDR	model	coefficient	cell_type	n_ad_pools	n_control_pools	minimum_cells_per_pool
+SEA-AD pseudobulk	-0.0632601537941217	7.89067431184415	-0.416010124922225	0.681608903555416	0.991795919274617	-4.74551765741172	TSPAN14	microglia	High_AD_vs_Low_or_Not_AD	12.0	23.0	disease;age_at_death;sex;batch_vendor;rin;median_umis;cell_group_fraction										
+SEA-AD pseudobulk	0.102985843923396	4.69870311960833	1.07440365051316	0.295517005232858	0.648254565276197	-5.63842075777037	TSPAN14	neurons	High_AD_vs_Low_or_Not_AD	12.0	23.0	disease;age_at_death;sex;batch_vendor;rin;median_umis;cell_group_fraction										
+GSE243292 microglia	0.0921275710784576						TSPAN14						6.64848688195279	0.100905111250694	0.753685713272748	0.999920274391818	pathology_stage_adjusted	pathology_stage				
+GSE243292 microglia	0.111480384122208						TSPAN14						6.64917934980996	0.14735004966939	0.704496986494366	0.999827457801007	pathology_stage_composition_adjusted	pathology_stage				
+GSE243292 microglia	0.0450057986029009						TSPAN14						6.64864291262103	0.014928886579814	0.90382873919486	0.999864119026517	ad_binary_adjusted	ad_binary				
+GSE243292 microglia	-0.308783754988849						TSPAN14						6.79496516605036	1.80112765854396	0.181271059838873	0.426761987100816	within_donor_reactive_state	state_groupReactive_associated				
+GSE138852 pseudobulk	1.31284822148903						TSPAN14		AD_vs_Control				4.7387011297906	5.85622478597119	0.0268785606776525	0.282711436075872			Astrocytes	3.0	3.0	96.0
+GSE138852 pseudobulk	1.2287822759831						TSPAN14		AD_vs_Control				8.01928970484358	4.6510903175344	0.0406292085962227	0.550045489625387			Microglia	3.0	3.0	21.0
+GSE138852 pseudobulk	0.795078427449803						TSPAN14		AD_vs_Control				4.84730657196157	3.1871831525203	0.0974037355821725	0.5436052039455			Oligodendrocytes	3.0	3.0	409.0
