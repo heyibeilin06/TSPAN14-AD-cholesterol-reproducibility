@@ -1,0 +1,6 @@
+resource	context_label	cell_resolution	event_coordinate	snp	risk_allele	risk_aligned_effect	p_value	permitted_role
+MiGA	Isolated microglia	cell_type_specific	chr10:80509471:80512144	rs1870137	G	1.25052928924561	1.15810398752891e-07	Direct cell-resolved exact-event sQTL
+GTEx v8	Putamen	bulk_tissue	chr10:80509471:80512144	rs1870137	G	0.705483	5.91175e-12	Cross-tissue exact-event consistency
+GTEx v8	Hippocampus	bulk_tissue	chr10:80509471:80512144	rs1870137	G	0.781785	5.34412e-11	Cross-tissue exact-event consistency
+GTEx v8	Anterior cingulate BA24	bulk_tissue	chr10:80509471:80512144	rs1870137	G	1.19383	3.93955e-21	Cross-tissue exact-event consistency
+GTEx v8	Cervical spinal cord	bulk_tissue	chr10:80509471:80512144	rs1870137	G	0.900012	2.23872e-12	Cross-tissue exact-event consistency

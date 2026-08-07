@@ -2,10 +2,15 @@
 
 suppressPackageStartupMessages(library(data.table))
 args <- commandArgs(trailingOnly = TRUE)
-root <- normalizePath(if (length(args) >= 2 && args[1] == "--project-root") args[2] else ".",
-                      winslash = "/", mustWork = TRUE)
-out_dir <- file.path(root, "outputs", "main_figures_v9")
-source_dir <- file.path(out_dir, "source_data")
+value_after <- function(flag, default = NULL) {
+  i <- match(flag, args)
+  if (is.na(i)) return(default)
+  if (i == length(args)) stop("Missing value for ", flag, call. = FALSE)
+  args[[i + 1L]]
+}
+root <- normalizePath(value_after("--project-root", "."), winslash = "/", mustWork = TRUE)
+out_dir <- normalizePath(value_after("--output-dir", file.path(root, "figures", "Figure_04", "output")), winslash = "/", mustWork = TRUE)
+source_dir <- normalizePath(value_after("--source-dir", file.path(root, "figures", "Figure_04", "data")), winslash = "/", mustWork = TRUE)
 
 checks <- list()
 add_check <- function(name, passed, detail) {
@@ -44,6 +49,8 @@ svg_path <- paste0(stem, ".svg")
 if (file.exists(svg_path)) {
   svg_text <- paste(readLines(svg_path, warn = FALSE), collapse = "\n")
   add_check("uppercase panel labels", all(vapply(LETTERS[1:6], function(x) grepl(paste0(">", x, "<"), svg_text, fixed = TRUE), logical(1))), "A-F")
+  add_check("lipid attenuation label", grepl("Lipid-coefficient attenuation", svg_text, fixed = TRUE), "correct Panel F interpretation")
+  add_check("obsolete splice attenuation label absent", !grepl("Splice-coefficient attenuation", svg_text, fixed = TRUE), "obsolete label removed")
   add_check("no local paths in SVG", !grepl("C:/Users|D:/|C:\\\\Users|D:\\\\", svg_text, perl = TRUE), "portable SVG")
 }
 

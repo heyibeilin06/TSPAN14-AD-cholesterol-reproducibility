@@ -1,0 +1,7 @@
+tissue_1	tissue_2	donors_tissue_1	donors_tissue_2	shared_donors	jaccard_index	fraction_tissue_1_shared	fraction_tissue_2_shared
+Brain - Anterior cingulate cortex (BA24)	Brain - Hippocampus	176	197	118	0.4627450980392157	0.6704545454545454	0.5989847715736041
+Brain - Anterior cingulate cortex (BA24)	Brain - Putamen (basal ganglia)	176	205	122	0.47104247104247104	0.6931818181818182	0.5951219512195122
+Brain - Anterior cingulate cortex (BA24)	Brain - Spinal cord (cervical c-1)	176	159	85	0.34	0.48295454545454547	0.5345911949685535
+Brain - Hippocampus	Brain - Putamen (basal ganglia)	197	205	138	0.5227272727272727	0.700507614213198	0.6731707317073171
+Brain - Hippocampus	Brain - Spinal cord (cervical c-1)	197	159	93	0.35361216730038025	0.4720812182741117	0.5849056603773585
+Brain - Putamen (basal ganglia)	Brain - Spinal cord (cervical c-1)	205	159	97	0.36329588014981273	0.47317073170731705	0.610062893081761

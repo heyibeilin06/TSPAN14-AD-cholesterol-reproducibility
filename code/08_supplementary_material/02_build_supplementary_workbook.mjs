@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 import fs from "node:fs/promises";
 import path from "node:path";
-import { SpreadsheetFile, Workbook } from "@oai/artifact-tool";
+import { pathToFileURL } from "node:url";
+
+const artifactToolModule = process.env.ARTIFACT_TOOL_MODULE
+  ? pathToFileURL(process.env.ARTIFACT_TOOL_MODULE).href
+  : "@oai/artifact-tool";
+const { SpreadsheetFile, Workbook } = await import(artifactToolModule);
 
 const root = path.resolve(process.argv[2] ?? ".");
 const base = path.join(root, "outputs", "supplement_v19");

@@ -329,7 +329,7 @@
 <text x='289.30' y='459.30' text-anchor='middle' style='font-size: 7.20px;fill: #263640; font-family: "Arial";' textLength='14.00px' lengthAdjust='spacingAndGlyphs'>0.90</text>
 <text x='396.50' y='459.30' text-anchor='middle' style='font-size: 7.20px;fill: #263640; font-family: "Arial";' textLength='14.00px' lengthAdjust='spacingAndGlyphs'>0.95</text>
 <text x='503.69' y='459.30' text-anchor='middle' style='font-size: 7.20px;fill: #263640; font-family: "Arial";' textLength='14.00px' lengthAdjust='spacingAndGlyphs'>1.00</text>
-<text x='289.30' y='468.71' text-anchor='middle' style='font-size: 8.20px; font-family: "Arial";' textLength='68.11px' lengthAdjust='spacingAndGlyphs'>Exact-event PP.H4</text>
+<text x='289.30' y='468.71' text-anchor='middle' style='font-size: 8.20px; font-family: "Arial";' textLength='114.45px' lengthAdjust='spacingAndGlyphs'>Default-prior exact-event PP.H4</text>
 <text x='67.42' y='284.24' style='font-size: 9.20px; font-weight: bold;fill: #172B3A; font-family: "Arial";' textLength='125.05px' lengthAdjust='spacingAndGlyphs'>Exact exon5-6 colocalization</text>
 <text x='18.57' y='283.88' text-anchor='middle' style='font-size: 12.00px; font-weight: bold; font-family: "Arial";' textLength='8.67px' lengthAdjust='spacingAndGlyphs'>C</text>
 </g>

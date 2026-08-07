@@ -1,0 +1,5 @@
+trait	pph4_default	pph4_conservative	prior_interpretation
+AD	0.990857886443657	0.9155290514696578	prior-robust
+TC	0.97705398860426	0.8098156387312733	prior-robust
+LDL-C	0.958888926242983	0.6999190960193996	prior-sensitive
+non-HDL-C	0.959844824231557	0.7050442442573946	prior-sensitive

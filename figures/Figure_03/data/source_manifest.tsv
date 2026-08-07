@@ -1,5 +1,5 @@
 artifact	role
-Figure_3_exact_replication_matrix.tsv	Six-variant by four-tissue exact-event replication
+Figure_3_exact_replication_matrix.tsv	Six-variant by four-tissue exact-event consistency
 Figure_3_ba24_donor_ier.tsv	BA24 donor-level raw IER and genotype
 Figure_3_depth_sensitivity_delta_ier.tsv	Read-depth sensitivity of DeltaIER
 Figure_3_alignment_metric_audit.tsv	Allele-orientation and metric audit

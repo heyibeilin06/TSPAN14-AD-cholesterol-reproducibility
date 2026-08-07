@@ -3,10 +3,15 @@
 suppressPackageStartupMessages(library(data.table))
 
 args <- commandArgs(trailingOnly = TRUE)
-root <- normalizePath(if (length(args) >= 2 && args[1] == "--project-root") args[2] else ".",
-                      winslash = "/", mustWork = TRUE)
-out_dir <- file.path(root, "outputs", "main_figures_v9")
-source_dir <- file.path(out_dir, "source_data")
+value_after <- function(flag, default = NULL) {
+  i <- match(flag, args)
+  if (is.na(i)) return(default)
+  if (i == length(args)) stop("Missing value for ", flag, call. = FALSE)
+  args[[i + 1L]]
+}
+root <- normalizePath(value_after("--project-root", "."), winslash = "/", mustWork = TRUE)
+out_dir <- normalizePath(value_after("--output-dir", file.path(root, "figures", "Figure_02", "output")), winslash = "/", mustWork = TRUE)
+source_dir <- normalizePath(value_after("--source-dir", file.path(root, "figures", "Figure_02", "data")), winslash = "/", mustWork = TRUE)
 
 checks <- list()
 add_check <- function(name, passed, detail) {
@@ -19,11 +24,14 @@ transcripts <- fread(file.path(source_dir, "Figure_2_gencode_v38_transcripts.tsv
 ccre <- fread(file.path(source_dir, "Figure_2_regulatory_elements.tsv"), sep = "\t")
 coloc <- fread(file.path(source_dir, "Figure_2_exact_event_coloc.tsv"), sep = "\t")
 annotation <- fread(file.path(source_dir, "Figure_2_variant_annotation_matrix.tsv"), sep = "\t")
+events <- fread(file.path(source_dir, "Figure_2_splice_events.tsv"), sep = "\t")
 
 add_check("five aligned tracks", setequal(unique(tracks$track), c("AD", "TC", "LDL", "nonHDL", "BA24 exact exon5-6 sQTL")), paste(unique(tracks$track), collapse = ", "))
 add_check("regional variants present", nrow(tracks) > 10000, nrow(tracks))
 add_check("four locus comparisons", setequal(unique(scatter$comparison), c("AD", "TC", "LDL", "nonHDL")), paste(unique(scatter$comparison), collapse = ", "))
 add_check("exact-event posteriors complete", nrow(coloc) == 4 && all(coloc$pph4 > 0.95), paste(round(coloc$pph4, 4), collapse = ", "))
+add_check("conservative posterior sensitivity complete", all(is.finite(coloc$pph4_conservative)) && min(coloc$pph4_conservative) > 0.69, paste(round(coloc$pph4_conservative, 4), collapse = ", "))
+add_check("canonical and cryptic events present", all(c("exact", "competing") %in% events$event_class), paste(events$event_class, collapse = ", "))
 add_check("canonical transcript present", any(grepl("ENST00000429989", transcripts$display_name)), "ENST00000429989")
 add_check("47 cCREs retained", nrow(ccre) == 47, nrow(ccre))
 add_check("annotation matrix complete", nrow(annotation) == length(unique(annotation$snp)) * 7, nrow(annotation))

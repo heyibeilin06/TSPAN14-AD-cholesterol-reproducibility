@@ -12,8 +12,8 @@ value_after <- function(flag, default = NULL) {
 }
 
 root <- normalizePath(value_after("--project-root", "."), winslash = "/", mustWork = TRUE)
-out_dir <- file.path(root, "outputs", "main_figures_v9")
-source_dir <- file.path(out_dir, "source_data")
+out_dir <- normalizePath(value_after("--output-dir", file.path(root, "figures", "Figure_01", "output")), winslash = "/", mustWork = TRUE)
+source_dir <- normalizePath(value_after("--source-dir", file.path(root, "figures", "Figure_01", "data")), winslash = "/", mustWork = TRUE)
 stem <- "Figure_1_APOE_aware_TSPAN14_prioritization_v9"
 
 checks <- list()
@@ -24,6 +24,7 @@ record_check <- function(name, passed, detail) {
 
 ldsc <- fread(file.path(source_dir, "Figure_1_ldsc_apoe_conditioning.tsv"), sep = "\t")
 regional <- fread(file.path(source_dir, "Figure_1_regional_screen.tsv"), sep = "\t")
+prior <- fread(file.path(source_dir, "Figure_1_regional_prior_sensitivity.tsv"), sep = "\t")
 
 get_one <- function(x, condition, column) {
   value <- x[eval(condition), get(column)]

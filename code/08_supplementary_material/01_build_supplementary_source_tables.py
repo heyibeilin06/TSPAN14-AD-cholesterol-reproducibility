@@ -67,15 +67,19 @@ def table7() -> pd.DataFrame:
 
 def table8() -> pd.DataFrame:
     old = retained(8)
-    old = old[~old.get("analysis_block", pd.Series(index=old.index, dtype=str)).isin([
+    blocks = old.get("analysis_block", pd.Series(index=old.index, dtype=str)).astype(str).str.strip()
+    old = old[~blocks.isin([
         "GTEx focal-tissue donor counts",
         "GTEx focal-tissue donor overlap",
     ])].copy()
+    old["analysis_block"] = old["analysis_block"].replace(
+        "risk-aligned replication", "risk-aligned cross-tissue consistency"
+    )
     return combine(
         old,
         tagged("audit/reviewer_revision/gtex_focal_tissue_donor_counts.tsv", "GTEx focal-tissue donor counts"),
         tagged("audit/reviewer_revision/gtex_focal_tissue_donor_overlap.tsv", "GTEx focal-tissue donor overlap"),
-    )
+    ).drop_duplicates().reset_index(drop=True)
 
 
 def table10() -> pd.DataFrame:
@@ -94,7 +98,17 @@ def table13() -> pd.DataFrame:
         "all_laub_core_ad_effect_alleles_decrease_target_junction_usage",
         "all_laub_core_ad_effect_alleles_decrease_cryptic_acceptor_junction_usage",
     )
+    data = data.replace("target junction usage", "cryptic acceptor junction usage", regex=False)
     return data
+
+
+def table12() -> pd.DataFrame:
+    data = retained(12)
+    return data.replace(
+        "Cross-region bulk replication",
+        "Cross-tissue consistency in partially overlapping bulk neural tissues",
+        regex=False,
+    )
 
 
 def table17() -> pd.DataFrame:
@@ -120,7 +134,7 @@ TABLES: dict[int, tuple[str, callable]] = {
     9: ("Exon5-6 and exon6-7 neural-tissue co-usage", lambda: retained(9)),
     10: ("Exact-event cis-MR, LD diagnostics and overlap sensitivity", table10),
     11: ("Bidirectional MR, multivariable MR and PC-GMM identification scope", lambda: retained(11)),
-    12: ("Neural cell localization and molecular-QTL context", lambda: retained(12)),
+    12: ("Neural cell localization and molecular-QTL context", table12),
     13: ("AD disease-state RNA and differential transcript usage", table13),
     14: ("Cross-study single-nucleus meta-analysis", lambda: retained(14)),
     15: ("Independent pseudobulk disease-state sensitivity", lambda: retained(15)),

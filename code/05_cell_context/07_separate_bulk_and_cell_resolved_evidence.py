@@ -255,7 +255,7 @@ def main() -> None:
                 "standard_error": pd.NA,
                 "p_value": row.p_value,
                 "effect_metric": "GTEx normalized effect size",
-                "permitted_role": "independent exact-event bulk-tissue replication",
+                "permitted_role": "exact-event consistency across partially overlapping bulk-tissue donor sets",
             }
         )
     exact_evidence = pd.DataFrame(exact_rows)
@@ -369,7 +369,7 @@ hypothesis, not as a cell-of-origin conclusion derived from BA24.
 
 - MiGA mapped expression and splicing QTLs in isolated human microglia:
   https://doi.org/10.1038/s41588-021-00976-y
-- GTEx v8 provides the independent bulk-tissue exact-event replication:
+- GTEx v8 provides bulk-tissue exact-event cross-tissue consistency across partially overlapping donor sets:
   https://gtexportal.org/home/
 - isoMiGA top-association data were additionally screened through Zenodo record
   8250771. Absence from this top-hit-only file is recorded as uninformative, not

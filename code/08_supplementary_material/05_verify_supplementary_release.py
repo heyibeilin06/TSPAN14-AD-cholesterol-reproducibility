@@ -1,77 +1,122 @@
 #!/usr/bin/env python3
-"""Release gates for the independently rebuilt supplement v19."""
+"""Verify the synchronized S1-S19 supplementary release."""
+
 from __future__ import annotations
-import hashlib, json, re
+
+import argparse
+import json
+import re
 from pathlib import Path
 from zipfile import ZipFile
+
+import pandas as pd
 from docx import Document
 from pypdf import PdfReader
 
-ROOT=Path(__file__).resolve().parents[1]
-BASE=ROOT/"outputs"/"supplement_v19"
-MANUSCRIPT=ROOT/"outputs"/"final_manuscript"/"手稿_主表重制版.docx"
-TITLE="A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice"
-OLD_TITLE="An APOE-aware Alzheimer disease-lipid screen identifies exact TSPAN14 splice regulation"
 
-def text(path):
-    d=Document(path); parts=[p.text for p in d.paragraphs]
-    for t in d.tables:
-        for r in t.rows: parts.extend(c.text for c in r.cells)
+ROOT = Path(__file__).resolve().parents[2]
+BASE = ROOT / "outputs" / "supplement_v19"
+TITLE = "A non-APOE Alzheimer disease-cholesterol locus converges on TSPAN14 splice choice"
+
+
+def document_text(path: Path) -> str:
+    doc = Document(path)
+    parts = [paragraph.text for paragraph in doc.paragraphs]
+    for table in doc.tables:
+        for row in table.rows:
+            parts.extend(cell.text for cell in row.cells)
     return "\n".join(parts)
 
-def refs(body, kind):
-    label=r"Fig(?:ure)?s?\.?" if kind=="fig" else r"Tables?"
-    pattern=rf"Supplementary\s+{label}\s+((?:S?\d+)(?:\s*(?:-|–|—|,|and)\s*S?\d+)*)"
-    out=set()
-    for m in re.finditer(pattern,body,re.I):
-        s=m.group(1)
-        for a,b in re.findall(r"S?(\d+)\s*(?:-|–|—)\s*S?(\d+)",s,re.I): out.update(range(int(a),int(b)+1))
-        s=re.sub(r"S?\d+\s*(?:-|–|—)\s*S?\d+","",s,flags=re.I)
-        out.update(int(x) for x in re.findall(r"S?(\d+)",s,re.I))
-    return out
 
-def digest(p):
-    h=hashlib.sha256()
-    with p.open("rb") as f:
-        for c in iter(lambda:f.read(1<<20),b""):h.update(c)
-    return h.hexdigest()
+def referenced_numbers(body: str, kind: str) -> set[int]:
+    label = r"Fig(?:ure)?s?" if kind == "figure" else r"Tables?"
+    pattern = re.compile(rf"Supplementary\s+{label}\.?\s+([^.;\)]+)", re.I)
+    numbers: set[int] = set()
+    for match in pattern.finditer(body):
+        block = match.group(1)
+        for start, end in re.findall(r"S?(\d+)\s*[-–]\s*S?(\d+)", block, re.I):
+            numbers.update(range(int(start), int(end) + 1))
+        numbers.update(int(value) for value in re.findall(r"S(\d+)", block, re.I))
+    return numbers
 
-def main():
-    m=text(MANUSCRIPT); s=text(BASE/"Supplementary_Information.docx")
-    expected_f=set(range(1,10)); expected_t=set(range(1,18))
-    required=[BASE/"Supplementary_Information.docx",BASE/"Supplementary_Information.pdf",BASE/"Supplementary_Tables.xlsx",BASE/"source_tables"/"Table_S00_Index.tsv"]
-    required += [BASE/"source_tables"/f"Table_S{i:02d}.tsv" for i in expected_t]
-    required += [BASE/"figures"/f"Supplementary_Figure_S{i}.{e}" for i in expected_f for e in ("png","pdf","svg","tiff")]
-    zip_ok={}
-    for p in required[:3]:
-        if p.suffix in {".docx",".xlsx"}:
-            with ZipFile(p) as z: zip_ok[p.name]=z.testzip() is None
-    report={
-        "status":"PASS",
-        "supplement_title_exact": TITLE in s.splitlines()[:5],
-        "obsolete_title_absent": OLD_TITLE not in s,
-        "manuscript_figure_references":sorted(refs(m,"fig")),
-        "manuscript_table_references":sorted(refs(m,"table")),
-        "figure_legends":sorted(int(x) for x in re.findall(r"Supplementary Figure S(\d+)",s)),
-        "table_legends":sorted(int(x) for x in re.findall(r"Supplementary Table S(\d+)",s)),
-        "missing_or_empty_files":[str(p) for p in required if not p.exists() or p.stat().st_size==0],
-        "office_zip_integrity":zip_ok,
-        "pdf_pages":len(PdfReader(BASE/"Supplementary_Information.pdf").pages),
-        "workbook_qa":json.loads((BASE/"qa"/"workbook"/"workbook_qa.json").read_text())["status"],
-        "docx_rendered_pages":len(list((BASE/"qa"/"docx").glob("page-*.png"))),
+
+def office_zip_ok(path: Path) -> bool:
+    with ZipFile(path) as archive:
+        return archive.testzip() is None
+
+
+def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--manuscript", type=Path, required=True)
+    args = parser.parse_args()
+
+    expected_figures = set(range(1, 10))
+    expected_tables = set(range(1, 20))
+    manuscript = document_text(args.manuscript)
+    supplement_docx = BASE / "Supplementary_Information.docx"
+    supplement_pdf = BASE / "Supplementary_Information.pdf"
+    workbook = BASE / "Supplementary_Tables.xlsx"
+    supplement = document_text(supplement_docx)
+
+    index = pd.read_csv(BASE / "source_tables" / "Table_S00_Index.tsv", sep="\t")
+    table_shapes = {}
+    shape_errors = []
+    for row in index.itertuples(index=False):
+        table_path = BASE / "source_tables" / row.file
+        data = pd.read_csv(table_path, sep="\t")
+        table_shapes[f"S{row.number}"] = [len(data), len(data.columns)]
+        if len(data) != int(row.rows) or len(data.columns) != int(row.columns):
+            shape_errors.append(f"S{row.number}: index={row.rows}x{row.columns}, file={len(data)}x{len(data.columns)}")
+
+    s8 = pd.read_csv(BASE / "source_tables" / "Table_S08.tsv", sep="\t")
+    s8_blocks = s8["analysis_block"].astype(str).str.strip()
+    s8_ok = (
+        len(s8) == 38
+        and (s8_blocks == "GTEx focal-tissue donor counts").sum() == 4
+        and (s8_blocks == "GTEx focal-tissue donor overlap").sum() == 6
+        and not s8.astype(str).apply(lambda column: column.str.contains("risk-aligned replication", case=False, regex=False)).any().any()
+    )
+
+    required = [supplement_docx, supplement_pdf, workbook, BASE / "source_tables" / "Table_S00_Index.tsv"]
+    required += [BASE / "source_tables" / f"Table_S{i:02d}.tsv" for i in expected_tables]
+    required += [BASE / "figures" / f"Supplementary_Figure_S{i}.{ext}" for i in expected_figures for ext in ("png", "pdf", "svg", "tiff")]
+
+    manuscript_figures = referenced_numbers(manuscript, "figure")
+    manuscript_tables = referenced_numbers(manuscript, "table")
+    figure_legends = {int(value) for value in re.findall(r"Supplementary Figure S(\d+)", supplement)}
+    table_legends = {int(value) for value in re.findall(r"Supplementary Table S(\d+)", supplement)}
+
+    report = {
+        "title_exact": TITLE in supplement.splitlines()[:5],
+        "manuscript_figure_references": sorted(manuscript_figures),
+        "manuscript_table_references": sorted(manuscript_tables),
+        "figure_legends": sorted(figure_legends),
+        "table_legends": sorted(table_legends),
+        "missing_or_empty_files": [str(path) for path in required if not path.exists() or path.stat().st_size == 0],
+        "office_zip_integrity": {supplement_docx.name: office_zip_ok(supplement_docx), workbook.name: office_zip_ok(workbook)},
+        "pdf_pages": len(PdfReader(supplement_pdf).pages),
+        "workbook_qa": json.loads((BASE / "qa" / "workbook" / "workbook_qa.json").read_text(encoding="utf-8"))["status"],
+        "source_table_shapes": table_shapes,
+        "source_table_shape_errors": shape_errors,
+        "s8_deduplicated_and_relabelled": s8_ok,
+        "stale_terms": sorted(set(re.findall(r"(?:independent exact-event bulk-tissue replication|risk-aligned replication|replication across four neural tissues)", supplement + "\n" + "\n".join(path.read_text(encoding="utf-8") for path in (BASE / "source_tables").glob("*.tsv")), re.I))),
     }
-    report["missing_manuscript_figures"]=sorted(expected_f-set(report["manuscript_figure_references"]))
-    report["missing_manuscript_tables"]=sorted(expected_t-set(report["manuscript_table_references"]))
-    report["missing_figure_legends"]=sorted(expected_f-set(report["figure_legends"]))
-    report["missing_table_legends"]=sorted(expected_t-set(report["table_legends"]))
-    failures=[not report["supplement_title_exact"],not report["obsolete_title_absent"],report["missing_or_empty_files"],report["missing_manuscript_figures"],report["missing_manuscript_tables"],report["missing_figure_legends"],report["missing_table_legends"],not all(zip_ok.values()),report["pdf_pages"]!=14,report["workbook_qa"]!="PASS",report["docx_rendered_pages"]!=14]
-    if any(failures):report["status"]="FAIL"
-    (BASE/"qa_report.json").write_text(json.dumps(report,indent=2,ensure_ascii=False),encoding="utf-8")
-    files=[]
-    for p in sorted(BASE.rglob("*")):
-        if p.is_file() and "qa" not in p.parts and p.name not in {"release_manifest.tsv"} and not p.name.endswith(".inspect.ndjson"):
-            files.append((p.relative_to(BASE),p.stat().st_size,digest(p)))
-    (BASE/"release_manifest.tsv").write_text("file\tsize_bytes\tsha256\n"+"\n".join(f"{p}\t{n}\t{h}" for p,n,h in files)+"\n",encoding="utf-8")
-    print(json.dumps(report,indent=2,ensure_ascii=False)); raise SystemExit(0 if report["status"]=="PASS" else 1)
+    report["missing_manuscript_figures"] = sorted(expected_figures - manuscript_figures)
+    report["missing_manuscript_tables"] = sorted(expected_tables - manuscript_tables)
+    report["missing_figure_legends"] = sorted(expected_figures - figure_legends)
+    report["missing_table_legends"] = sorted(expected_tables - table_legends)
+    failures = [
+        not report["title_exact"], report["missing_or_empty_files"],
+        not all(report["office_zip_integrity"].values()), report["pdf_pages"] != 14,
+        report["workbook_qa"] != "PASS", shape_errors, not s8_ok, report["stale_terms"],
+        report["missing_manuscript_figures"], report["missing_manuscript_tables"],
+        report["missing_figure_legends"], report["missing_table_legends"],
+    ]
+    report["status"] = "FAIL" if any(failures) else "PASS"
+    (BASE / "qa_report.json").write_text(json.dumps(report, indent=2, ensure_ascii=False), encoding="utf-8")
+    print(json.dumps(report, indent=2, ensure_ascii=False))
+    raise SystemExit(0 if report["status"] == "PASS" else 1)
 
-if __name__=="__main__":main()
+
+if __name__ == "__main__":
+    main()

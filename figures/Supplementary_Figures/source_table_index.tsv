@@ -2,13 +2,13 @@ number	title	file	rows	columns
 1	Data resources and baseline genome-wide genetic correlation	Table_S01.tsv	16	15
 2	Extended-APOE conditioning and physical-window sensitivity	Table_S02.tsv	66	22
 3	Complete non-APOE regional AD-lipid screen	Table_S03.tsv	15	13
-4	Regional, multiple-signal and exact-event colocalization	Table_S04.tsv	13	22
+4	Regional, multiple-signal and prior-sensitivity colocalization	Table_S04.tsv	20	35
 5	TSPAN14 fine-mapping and functional prioritization	Table_S05.tsv	68	23
-6	Donor-level exon5-6 intron-excision ratio	Table_S06.tsv	164	24
-7	Exon5-6 effect-size and count robustness	Table_S07.tsv	183	35
-8	Exact exon5-6 sQTL replication across neural tissues	Table_S08.tsv	28	21
+6	Donor-level canonical–cryptic acceptor read counts	Table_S06.tsv	150	23
+7	Canonical–cryptic read-count models and robustness	Table_S07.tsv	333	52
+8	Exact exon5-6 sQTL cross-tissue consistency and GTEx donor overlap	Table_S08.tsv	38	31
 9	Exon5-6 and exon6-7 neural-tissue co-usage	Table_S09.tsv	13	10
-10	Exact-event cis-MR, diagnostics and sample-overlap sensitivity	Table_S10.tsv	32	15
+10	Exact-event cis-MR, LD diagnostics and overlap sensitivity	Table_S10.tsv	130	35
 11	Bidirectional MR, multivariable MR and PC-GMM identification scope	Table_S11.tsv	74	22
 12	Neural cell localization and molecular-QTL context	Table_S12.tsv	17	38
 13	AD disease-state RNA and differential transcript usage	Table_S13.tsv	14	20
@@ -16,3 +16,5 @@ number	title	file	rows	columns
 15	Independent pseudobulk disease-state sensitivity	Table_S15.tsv	9	23
 16	Transcript, EC2 and AlphaFold reference-model mapping	Table_S16.tsv	123	17
 17	Proteomic, perturbation and downstream functional evidence	Table_S17.tsv	19	27
+18	Signed functional-variant haplotype audit	Table_S18.tsv	4	13
+19	Reproducibility and reviewer-revision audit	Table_S19.tsv	46	56

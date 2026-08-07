@@ -78,8 +78,21 @@ triangulation_path <- file.path(legacy_dir, "Figure_5_exact_event_triangulation.
 if (!file.exists(triangulation_path)) stop("Missing exact-event triangulation source", call. = FALSE)
 triangulation <- fread(triangulation_path, sep = "\t")
 triangulation <- triangulation[trait %chin% c("AD", "TC", "LDL-C", "non-HDL-C")]
-stopifnot(nrow(triangulation) == 4L, all(is.finite(triangulation$pph4)))
+stopifnot(
+  nrow(triangulation) == 4L,
+  all(is.finite(triangulation$pph4)),
+  all(is.finite(triangulation$pph4_conservative))
+)
+triangulation[, prior_interpretation := fifelse(pph4_conservative >= 0.80, "prior-robust", "prior-sensitive")]
 fwrite(triangulation, file.path(out_dir, "Figure_2_exact_event_coloc.tsv"), sep = "\t")
+
+splice_event_path <- file.path(out_dir, "Figure_3_splice_events.tsv")
+if (!file.exists(splice_event_path)) stop("Missing Figure 3 splice-event coordinates", call. = FALSE)
+splice_events <- fread(splice_event_path, sep = "\t", na.strings = c("", "NA"))
+required_event_columns <- c("event", "event_class", "start_grch38", "end_grch38", "protein_transition", "evidence")
+missing_event_columns <- setdiff(required_event_columns, names(splice_events))
+if (length(missing_event_columns)) stop("Missing splice-event columns: ", paste(missing_event_columns, collapse = ", "), call. = FALSE)
+fwrite(splice_events, file.path(out_dir, "Figure_2_splice_events.tsv"), sep = "\t", na = "NA")
 
 functional_path <- file.path(
   root, "outputs", "supplementary_material", "supplementary_table_sources",
@@ -131,15 +144,17 @@ manifest <- data.table(
     "Figure_2_locus_tracks_grch38.tsv", "Figure_2_colocalization_scatter.tsv",
     "Figure_2_gencode_v38_transcripts.tsv", "Figure_2_gencode_v38_exons.tsv",
     "Figure_2_regulatory_elements.tsv", "Figure_2_annotation_markers_grch38.tsv",
-    "Figure_2_exact_event_coloc.tsv", "Figure_2_variant_annotation_matrix.tsv"
+    "Figure_2_exact_event_coloc.tsv", "Figure_2_variant_annotation_matrix.tsv",
+    "Figure_2_splice_events.tsv"
   ),
   role = c(
     "Aligned regional association tracks", "Locus-comparison scatter panels",
     "GENCODE v38 transcript models", "GENCODE v38 exon coordinates",
     "ENCODE candidate cis-regulatory elements", "Published and project variant anchors",
-    "Exact-event colocalization posterior labels", "Compact functional annotation matrix"
+    "Exact-event default and conservative colocalization posterior labels",
+    "Compact functional annotation matrix", "Canonical, cryptic and adjacent splice-event coordinates"
   ),
-  coordinate_build = c(rep("GRCh38", 6), "SNP-aligned summary", "GRCh38")
+  coordinate_build = c(rep("GRCh38", 6), "SNP-aligned summary", "GRCh38", "GRCh38")
 )
 fwrite(manifest, file.path(out_dir, "Figure_2_source_manifest.tsv"), sep = "\t")
 

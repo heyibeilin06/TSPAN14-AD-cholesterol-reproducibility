@@ -142,9 +142,9 @@ p_d <- ggplot(structure, aes(residue, pLDDT)) +
            hjust = 0, size = 1.85, lineheight = 0.9, fontface = "bold",
            colour = v9_palette[["teal_dark"]], fill = "#EFF7F5", linewidth = 0,
            label.padding = grid::unit(0.65, "mm")) +
-  annotate("label", x = 153.0, y = 92.4, label = "Boundary pLDDT 93.3",
-           hjust = 0, size = 1.85, colour = v9_palette[["graphite"]],
-           fill = "#EFF7F5", linewidth = 0, label.padding = grid::unit(0.55, "mm")) +
+  annotate("label", x = 230.5, y = 106.3, label = "Boundary pLDDT 93.3",
+           hjust = 1, size = 1.75, colour = v9_palette[["graphite"]],
+           fill = "white", linewidth = 0, label.padding = grid::unit(0.50, "mm")) +
   scale_fill_manual(
     values = c(setNames(exons$fill, exons$exon), sse_colours),
     breaks = names(sse_colours), name = "Secondary structure"

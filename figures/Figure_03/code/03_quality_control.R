@@ -3,10 +3,15 @@
 suppressPackageStartupMessages(library(data.table))
 
 args <- commandArgs(trailingOnly = TRUE)
-root <- normalizePath(if (length(args) >= 2 && args[1] == "--project-root") args[2] else ".",
-                      winslash = "/", mustWork = TRUE)
-out_dir <- file.path(root, "outputs", "main_figures_v9")
-source_dir <- file.path(out_dir, "source_data")
+value_after <- function(flag, default = NULL) {
+  i <- match(flag, args)
+  if (is.na(i)) return(default)
+  if (i == length(args)) stop("Missing value for ", flag, call. = FALSE)
+  args[[i + 1L]]
+}
+root <- normalizePath(value_after("--project-root", "."), winslash = "/", mustWork = TRUE)
+out_dir <- normalizePath(value_after("--output-dir", file.path(root, "figures", "Figure_03", "output")), winslash = "/", mustWork = TRUE)
+source_dir <- normalizePath(value_after("--source-dir", file.path(root, "figures", "Figure_03", "data")), winslash = "/", mustWork = TRUE)
 
 checks <- list()
 add_check <- function(name, passed, detail) {
@@ -33,7 +38,7 @@ add_check("junction co-usage strong", cor(counts$log_ex5_6, counts$log_ex6_7, me
 add_check("13 brain-region summaries", nrow(cousage) == 13, nrow(cousage))
 add_check("three splice event classes", setequal(unique(events$event_class), c("exact", "competing", "adjacent")), paste(events$event_class, collapse = ","))
 
-stem <- file.path(out_dir, "Figure_3_exact_splicing_replication_v9")
+stem <- file.path(out_dir, "Figure_3_exact_splicing_consistency_v10")
 for (extension in c("png", "pdf", "svg", "tiff")) {
   path <- paste0(stem, ".", extension)
   add_check(paste(extension, "export exists"), file.exists(path) && file.info(path)$size > 10000, if (file.exists(path)) file.info(path)$size else 0)

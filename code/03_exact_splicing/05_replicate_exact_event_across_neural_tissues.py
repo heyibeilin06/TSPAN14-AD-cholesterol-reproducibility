@@ -103,7 +103,7 @@ def main() -> None:
         "eligible_for_Steiger": False,
         "eligible_for_coloc_constrained_mediation_sensitivity": False,
         "decision": "not_initiated",
-        "allowed_interpretation": "GTEx provides independent bulk-brain replication of the exact TSPAN14 exon5-exon6 splice feature.",
+        "allowed_interpretation": "GTEx provides cross-tissue consistency for the exact TSPAN14 exon5-exon6 splice feature across partially overlapping donor sets.",
         "prohibited_interpretation": "The significant-pair API response and one independent top-tissue instrument do not identify lipid-to-AD mediation or allow HEIDI diagnostics.",
         "reason": "Only one LD-independent strong instrument was observed in the best-supported brain tissue, and the endpoint is a significant-association resource rather than all tested feature statistics for AD colocalization.",
     }

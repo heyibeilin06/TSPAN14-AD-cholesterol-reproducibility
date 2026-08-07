@@ -1,0 +1,4 @@
+genotype	donors	canonical_reads	cryptic_reads	cryptic_positive_donors	mean_canonical_fraction	median_cluster_depth	minimum_cluster_depth	maximum_cluster_depth	cryptic_positive_fraction
+0	6	239	11	5	0.9557360893075179	47.0	25	52	0.8333333333333334
+1	35	1373	36	21	0.9713803128918981	38.0	15	84	0.6
+2	106	3920	0	0	1.0	31.5	5	115	0.0

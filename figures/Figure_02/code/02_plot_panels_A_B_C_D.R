@@ -15,6 +15,16 @@ exons <- read_v9_source(paths$source_dir, "Figure_2_gencode_v38_exons.tsv")
 ccre <- read_v9_source(paths$source_dir, "Figure_2_regulatory_elements.tsv")
 coloc <- read_v9_source(paths$source_dir, "Figure_2_exact_event_coloc.tsv")
 annotation <- read_v9_source(paths$source_dir, "Figure_2_variant_annotation_matrix.tsv")
+splice_events <- read_v9_source(
+  paths$source_dir, "Figure_2_splice_events.tsv",
+  c("event", "event_class", "start_grch38", "end_grch38")
+)
+exact_event <- splice_events[event_class == "exact"][1]
+cryptic_event <- splice_events[event_class == "competing"][1]
+stopifnot(nrow(exact_event) == 1L, nrow(cryptic_event) == 1L)
+exact_start <- exact_event$start_grch38 / 1e6
+exact_end <- exact_event$end_grch38 / 1e6
+cryptic_end <- cryptic_event$end_grch38 / 1e6
 
 region <- c(80.45, 80.53)
 lead_position <- markers[snp == "rs7080009", position_grch38][1] / 1e6
@@ -101,11 +111,19 @@ p_b <- ggplot() +
     fontface = ifelse(selected_transcripts$is_primary, "bold", "plain")
   ) +
   geom_curve(
-    aes(x = 80.509471, xend = 80.512144, y = primary_y + 0.26, yend = primary_y + 0.26),
+    aes(x = exact_start, xend = exact_end, y = primary_y + 0.26, yend = primary_y + 0.26),
     curvature = -0.58, linewidth = 0.72, colour = v9_palette[["blue"]]
   ) +
-  annotate("text", x = 80.5108, y = primary_y + 0.86, label = "exact exon5-6", size = 1.68,
-           fontface = "bold", colour = v9_palette[["blue_dark"]]) +
+  geom_curve(
+    aes(x = exact_start, xend = cryptic_end, y = primary_y - 0.24, yend = primary_y - 0.24),
+    curvature = 0.72, linewidth = 0.68, colour = v9_palette[["amber"]]
+  ) +
+  annotate("label", x = 80.5120, y = primary_y + 0.88, label = "canonical exon5-6", size = 1.52,
+           fontface = "bold", colour = v9_palette[["blue_dark"]], fill = "white", linewidth = 0,
+           label.padding = grid::unit(0.35, "mm")) +
+  annotate("label", x = 80.5058, y = primary_y - 0.82, label = "competing cryptic acceptor", size = 1.42,
+           hjust = 0, fontface = "bold", colour = v9_palette[["amber"]], fill = "white", linewidth = 0,
+           label.padding = grid::unit(0.35, "mm")) +
   geom_rect(
     data = ccre,
     aes(xmin = start_mb, xmax = end_mb, ymin = -1.28, ymax = -0.82, fill = display_class), colour = NA
@@ -164,7 +182,11 @@ scatter[, high_ld := r2_to_rs7080009 >= 0.6]
 pp_map <- setNames(coloc$pph4, coloc$trait)
 pp_labels <- data.table(
   comparison_label = factor(comparison_labels, levels = comparison_labels),
-  label = sprintf("Default PP.H4 %.3f", pp_map[c("AD", "TC", "LDL-C", "non-HDL-C")])
+  label = sprintf(
+    "PP.H4 %.3f\np12/10 %.3f",
+    pp_map[c("AD", "TC", "LDL-C", "non-HDL-C")],
+    setNames(coloc$pph4_conservative, coloc$trait)[c("AD", "TC", "LDL-C", "non-HDL-C")]
+  )
 )
 
 p_c <- ggplot(scatter, aes(trait_neg_log10_p, sqtl_neg_log10_p)) +
@@ -193,12 +215,12 @@ annotation[, evidence_class := fcase(
   metric == "CRISPRi", "Published perturbation",
   metric == "Prime editing", "Published editing",
   metric == "EUR LD r2", "LD",
-  metric == "sQTL tissues", "Replication",
+  metric == "sQTL tissues", "Cross-tissue context",
   default = "Project annotation"
 )]
 
 matrix_colours <- c(
-  LD = v9_palette[["purple"]], Replication = v9_palette[["teal"]],
+  LD = v9_palette[["purple"]], `Cross-tissue context` = v9_palette[["teal"]],
   `Project annotation` = v9_palette[["blue"]],
   `Published perturbation` = v9_palette[["amber"]], `Published editing` = v9_palette[["red"]]
 )

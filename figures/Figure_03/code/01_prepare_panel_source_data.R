@@ -93,7 +93,7 @@ splice_events <- rbindlist(list(
     event = "Canonical exon5-6", event_class = "exact",
     start_grch38 = structure[event == "project_exon5_exon6", as.numeric(sub(".*:(\\d+)-.*", "\\1", junction_coordinates))],
     end_grch38 = structure[event == "project_exon5_exon6", as.numeric(sub(".*-(\\d+)$", "\\1", junction_coordinates))],
-    protein_transition = "AA150/151", evidence = "Exact replicated sQTL"
+    protein_transition = "AA150/151", evidence = "Exact cross-tissue-consistent sQTL"
   ),
   data.table(
     event = "Cryptic acceptor 1", event_class = "competing",
@@ -139,7 +139,7 @@ for (filename in names(tables)) fwrite(tables[[filename]], file.path(out_dir, fi
 manifest <- data.table(
   artifact = names(tables),
   role = c(
-    "Six-variant by four-tissue exact-event replication", "BA24 donor-level raw IER and genotype",
+    "Six-variant by four-tissue exact-event consistency", "BA24 donor-level raw IER and genotype",
     "Read-depth sensitivity of DeltaIER", "Allele-orientation and metric audit",
     "GTEx brain exon5-6 and exon6-7 junction counts", "Brain-region junction co-usage summary",
     "GENCODE v38 exons 5-7 of ENST00000429989", "Coordinate-audited exact, competing and adjacent splice events"

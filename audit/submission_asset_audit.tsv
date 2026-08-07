@@ -6,6 +6,6 @@ Figure 4	Revised	Panel C now labels the colocalization diagnostic as default-pri
 Figure 5	Revised	Bulk neural evidence is described as cross-tissue consistency rather than independent replication.
 Figure 6	Revised	The summary model replaces independent replication with cross-tissue consistency and displays both default and p12/10 PP.H4 values.
 Tables 1-2	Retained	Both tables already distinguish prior-robust from prior-sensitive results and bound cis-MR interpretation.
-Supplementary Figures S1-S9	Retained	The figures match the Round 7 evidence hierarchy; S3C is explicitly default-prior.
-Supplementary Tables S1-S19	Rebuilt	S1-S19 remain synchronized; local development paths in S2 were replaced by SLM_DATA_ROOT-relative paths.
-Supplementary Information	Retained	Round 7 legends and methods remain aligned with the manuscript and workbook.
+Supplementary Figures S1-S9	Targeted revision	S2 legends were consolidated to prevent clipping, S3C is explicitly default-prior, and S9 margins and legends were rebuilt for readable cell-context display.
+Supplementary Tables S1-S19	Rebuilt	S1-S19 are synchronized to Round 10; S8 contains one donor-count/overlap block, and S4, S10 and S19 include the current prior, LD and overlap sensitivity fields.
+Supplementary Information	Rebuilt	Methods, figure legends and table legends are synchronized to the Round 10 manuscript and the revised S1-S19 workbook.

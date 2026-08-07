@@ -16,7 +16,7 @@ cousage <- read_v9_source(paths$source_dir, "Figure_3_brain_cousage_summary.tsv"
 exons <- read_v9_source(paths$source_dir, "Figure_3_primary_exons.tsv")
 events <- read_v9_source(paths$source_dir, "Figure_3_splice_events.tsv")
 
-# A. Cross-tissue exact-event replication matrix.
+# A. Cross-tissue exact-event consistency matrix.
 tissue_order <- c("BA24", "Hippocampus", "Putamen", "Spinal cord C1")
 snp_order <- unique(replication[order(position), snp_label])
 replication[, `:=`(
@@ -155,7 +155,7 @@ p_d <- ggplot() +
            size = 1.55, fontface = "bold", colour = v9_palette[["purple"]], fill = "white",
            linewidth = 0, label.padding = grid::unit(0.35, "mm")) +
   annotate("text", x = mean(events[event_class == "exact", c(start_grch38, end_grch38)]) / 1e6,
-           y = 1.15, label = "Canonical exon5-6 | AA150/151\nreplicated sQTL; read counts modelled",
+           y = 1.15, label = "Canonical exon5-6 | AA150/151\ncross-tissue-consistent sQTL; BA24 counts modelled",
            size = 1.8, fontface = "bold", colour = v9_palette[["blue_dark"]]) +
   annotate("text", x = mean(events[event_class == "competing", c(start_grch38, end_grch38)]) / 1e6,
            y = -1.02, label = "Competing cryptic acceptor 1", size = 1.65,
@@ -175,5 +175,5 @@ p_d <- ggplot() +
 figure_3 <- (p_a | p_b) / p_c / p_d +
   plot_layout(heights = c(1.02, 1.00, 0.78), widths = c(0.82, 1.45)) & panel_tag_theme_v9
 
-save_pub_v9(figure_3, paths$output_dir, "Figure_3_exact_splicing_replication_v9", 183, 190)
+save_pub_v9(figure_3, paths$output_dir, "Figure_3_exact_splicing_consistency_v10", 183, 190)
 message("Exported Figure 3 v9 to: ", paths$output_dir)

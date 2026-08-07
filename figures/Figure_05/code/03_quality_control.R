@@ -10,8 +10,8 @@ value_after <- function(flag, default = NULL) {
   args[[i + 1L]]
 }
 root <- normalizePath(value_after("--project-root", "."), winslash = "/", mustWork = TRUE)
-out_dir <- file.path(root, "outputs", "main_figures_v9")
-src_dir <- file.path(out_dir, "source_data")
+out_dir <- normalizePath(value_after("--output-dir", file.path(root, "figures", "Figure_05", "output")), winslash = "/", mustWork = TRUE)
+src_dir <- normalizePath(value_after("--source-dir", file.path(root, "figures", "Figure_05", "data")), winslash = "/", mustWork = TRUE)
 
 read_src <- function(name) fread(file.path(src_dir, name), sep = "\t", na.strings = c("", "NA"))
 atlas <- read_src("Figure_5_cell_context_atlas.tsv")

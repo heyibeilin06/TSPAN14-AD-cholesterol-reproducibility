@@ -1,0 +1,6 @@
+metric	value
+minimum_eigenvalue	0.13915212241021035
+maximum_eigenvalue	3.4815205627401964
+condition_number	25.019529004932604
+effective_rank_entropy	2.678619853525953
+effective_rank_eigenvalue_gt_0.1	5.0

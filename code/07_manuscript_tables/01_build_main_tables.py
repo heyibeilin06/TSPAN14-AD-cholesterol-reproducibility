@@ -71,7 +71,7 @@ TABLES = [
         ),
     },
     {
-        "title": "Table 2 | Replication, effect magnitude and molecular triangulation for exact TSPAN14 exon5–6 splicing",
+        "title": "Table 2 | Cross-tissue consistency, effect magnitude and molecular triangulation for exact TSPAN14 exon5–6 splicing",
         "headers": ["Evidence", "Tissue or outcome", "Effect estimate", "Statistical support", "Interpretation"],
         "widths": [1.55, 1.45, 1.80, 2.20, 3.30],
         "center_cols": {1, 2},
@@ -128,7 +128,7 @@ TABLES = [
         "center_cols": set(),
         "rows": [
             ["Exact-event cellular localization", "MiGA isolated human microglia", "Six risk-aligned variants increased use of the exact exon5–6 junction (β = 0.989–1.251).", "Directly localizes the core splice association to microglia without inferring its source from bulk tissue."],
-            ["Exact-event neural replication", "GTEx BA24, hippocampus, putamen and cervical spinal cord", "The identical exon5–6 junction showed concordant risk-allele effects in all four tissues.", "Establishes reproducibility across neural tissues while leaving bulk-tissue cellular origin unspecified."],
+            ["Exact-event neural-tissue consistency", "GTEx BA24, hippocampus, putamen and cervical spinal cord", "The identical exon5–6 junction showed concordant risk-allele effects in all four tissues.", "Shows cross-tissue consistency across partially overlapping donor sets while leaving bulk-tissue cellular origin unspecified."],
             ["Single-nucleus regulatory context", "NIAGADS ROSMAP/CUIMC/MIT eQTL analyses", "Three core risk variants increased TSPAN14 expression in astrocytic and excitatory-neuronal contexts (β = 0.233–0.378; FDR ≤ 1.13 × 10⁻⁴).", "Shows that the regulatory haplotype is active in multiple brain cell contexts; it is not an AD-state differential-expression result."],
             ["AD-state total RNA", "Single-cell meta-analysis, SEA-AD and independent pseudobulk datasets", "No reproducible FDR-significant change in total TSPAN14 expression across microglia or neuronal populations.", "Favors genotype-linked transcript processing over a universal late-stage change in total gene abundance."],
             ["Genotype-resolved perturbation", "Published rs7922621 prime editing and enhancer CRISPRi", "rs7922621 is in high LD with rs7080009 (r² = 0.987); perturbation altered TSPAN14, cell-surface ADAM10 and soluble TREM2.", "Provides an external functional anchor for the regulatory block and the TSPAN14–ADAM10–TREM2 axis."],

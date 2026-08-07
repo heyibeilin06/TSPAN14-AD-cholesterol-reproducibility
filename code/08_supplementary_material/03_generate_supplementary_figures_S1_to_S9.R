@@ -94,11 +94,25 @@ save_fig(((p8a|p8b)/p8c)+plot_annotation(tag_levels="A")&tag_theme,8,190,165)
 
 # S9: cell context and transcript-to-structure support
 atlas <- read_tsv2("outputs/main_figures_v9/source_data/Figure_5_cell_context_atlas.tsv") %>% mutate(score=as.numeric(evidence_strength))
-p9a <- ggplot(atlas,aes(evidence_layer,reorder(context,score),size=score,color=evidence_class)) + geom_point(alpha=.9) + scale_size(range=c(2,6),breaks=2:4,labels=c("Contextual","Moderate","Direct")) + labs(x=NULL,y=NULL,size="Evidence",color=NULL,title="Neural cell-context evidence") + theme_pub + theme(axis.text.x=element_text(angle=28,hjust=1))
+p9a <- ggplot(atlas,aes(evidence_layer,reorder(context,score),size=score,color=evidence_class)) +
+  geom_point(alpha=.9) +
+  scale_size(range=c(2,6),breaks=2:4,labels=c("Contextual","Moderate","Direct")) +
+  labs(x=NULL,y=NULL,size="Evidence",color=NULL,title="Neural cell-context evidence") +
+  guides(size=guide_legend(order=1,nrow=1),color=guide_legend(order=2,nrow=2,byrow=TRUE)) +
+  theme_pub +
+  theme(
+    axis.text.x=element_text(angle=28,hjust=1),
+    legend.position="bottom",
+    legend.justification="center",
+    legend.box="vertical",
+    legend.margin=margin(2,8,2,8),
+    legend.box.margin=margin(0,6,0,6),
+    plot.margin=margin(8,10,8,14)
+  )
 dis <- read_tsv2("outputs/main_figures_v9/source_data/Figure_5_disease_state_rna.tsv") %>% mutate(label=paste(source_label,cell_label,sep=" | "))
 p9b <- ggplot(dis,aes(estimate,reorder(label,estimate),color=estimate>0)) + geom_vline(xintercept=0,linetype=2,color="#A8B0B5") + geom_errorbarh(aes(xmin=lo,xmax=hi),height=.15,na.rm=TRUE) + geom_point(size=2.2) + scale_color_manual(values=c(`TRUE`=red,`FALSE`=blue),guide="none") + labs(x="Disease-state estimate (95% CI)",y=NULL,title="Disease-state RNA sensitivity") + theme_pub
 st <- read_tsv2("outputs/main_figures_v9/source_data/Figure_5_ec2_structure.tsv")
 p9c <- ggplot(st,aes(residue,pLDDT)) + annotate("rect",xmin=114,xmax=232,ymin=-Inf,ymax=Inf,fill="#DDF0EC",alpha=.6) + geom_line(linewidth=.65,color=grey) + geom_vline(xintercept=150.5,color=purple,linewidth=.8) + annotate("text",x=153,y=max(st$pLDDT,na.rm=TRUE),label="AA150/151",hjust=0,size=2.7,color=purple) + labs(x="TSPAN14 residue",y="AlphaFold pLDDT",title="Exact splice boundary within the EC2 region") + theme_pub
-save_fig(((p9a|p9b)/p9c)+plot_annotation(tag_levels="A")&tag_theme,9,190,170)
+save_fig(((p9a|p9b)/p9c)+plot_layout(widths=c(1.08,1),heights=c(1.12,1))+plot_annotation(tag_levels="A")&tag_theme,9,195,175)
 
 cat("Generated 9 supplementary figures in", out, "\n")

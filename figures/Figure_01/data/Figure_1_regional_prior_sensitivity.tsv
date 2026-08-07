@@ -1,0 +1,4 @@
+signal_id	regional_pp_h4_conservative	interpretation
+chr10 TSPAN14 | TC	0.8002779886225141	Most prior-robust regional convergence
+chr10 TSPAN14 | LDL	0.7162077272168146	High default-prior support; prior-sensitive
+chr10 TSPAN14 | nonHDL	0.6983859163069728	High default-prior support; prior-sensitive

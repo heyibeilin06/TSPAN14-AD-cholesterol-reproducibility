@@ -186,7 +186,7 @@ p_e2 <- ggplot(joint_strength, aes(assumed_pairwise_sampling_error_correlation, 
   )
 p_e <- p_e1 | p_e2
 
-# F. PC-GMM attenuation and identification stability across dimensions.
+# F. PC-GMM lipid-coefficient attenuation and identification stability.
 pc[, lipid_label := factor(lipid, levels = c("TC", "LDL", "nonHDL"), labels = c("TC", "LDL-C", "non-HDL-C"))]
 pc[, strength_status := factor(ifelse(all_strength_F_ge_10, "Both F >= 10", "At least one F < 10"),
                                levels = c("Both F >= 10", "At least one F < 10"))]
@@ -202,7 +202,7 @@ p_f1 <- ggplot(pc, aes(n_pcs, attenuation_fraction, colour = lipid_label, group 
   scale_shape_manual(values = c("Both F >= 10" = 16, "At least one F < 10" = 1), name = NULL) +
   scale_x_continuous(breaks = c(3, 5, 10, 15, 20, 25, 30)) +
   scale_y_continuous(limits = c(-1.1, 0.82), breaks = c(-1, -0.5, 0, 0.5)) +
-  labs(tag = "F", title = "Coefficient attenuation", x = "Retained LD principal components", y = "Splice-coefficient attenuation") +
+  labs(tag = "F", title = "Lipid-effect attenuation", x = "Retained LD principal components", y = "Lipid-coefficient attenuation\nafter splice adjustment") +
   theme_v9(5.45) +
   theme(
     plot.title = element_text(size = 5.45, face = "bold", hjust = 0),

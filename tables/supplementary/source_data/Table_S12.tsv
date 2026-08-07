@@ -1,6 +1,6 @@
 analysis_block	evidence_layer	context	evidence_class	evidence_strength	interpretation	rsID	variantId	targetGene	xQTLtype	study	pvalue	FDR	Z	beta	se	target	chrom	position	distance_to_target	cisOrTad	event_relation	source_url	release_note	evidence_boundary	snp	risk_alt	portal_alt	risk_allele_direction	cell_context	study_label	lo	hi	analysis	design	effect	p_value	adjusted_p_value
 evidence hierarchy	Exact exon5-6 sQTL	Microglia	Exact splice QTL	4.0	Cell-resolved genetic regulation																																
-evidence hierarchy	Exact exon5-6 sQTL	Bulk neural tissue	Exact splice QTL	3.0	Cross-region bulk replication																																
+evidence hierarchy	Exact exon5-6 sQTL	Bulk neural tissue	Exact splice QTL	3.0	Cross-tissue consistency in partially overlapping bulk neural tissues																																
 evidence hierarchy	Total-expression eQTL	Excitatory neurons	Gene-expression QTL	3.0	Risk allele increases total expression																																
 evidence hierarchy	Total-expression eQTL	Astrocytes	Gene-expression QTL	3.0	Risk allele increases total expression																																
 evidence hierarchy	Adjusted AD-state RNA	Microglia	Disease-state test	2.0	No FDR-significant abundance shift																																

@@ -61,6 +61,10 @@ fingerprint <- read_required(
   c("rank_by_product_pip", "snp", "mean_pip", "n_cs_memberships", "functional_prior_score",
     "functional_anchor", "priority_class", "trait", "pip")
 )
+prior_table <- read_required(
+  file.path(root, "tables", "supplementary", "source_data", "Table_S04.tsv"),
+  c("analysis_block", "trait_pair", "pp_h4_p12_div_10")
+)
 
 # Panel A: five baseline estimates plus the current extended-APOE sensitivity analyses.
 baseline <- ldsc_old[window == "baseline", .(comparison, rg, se, p)]
@@ -132,6 +136,24 @@ evidence <- atlas[, .(
   supported_tested_label
 )]
 
+regional_prior <- unique(prior_table[
+  analysis_block == "coloc prior sensitivity" & trait_pair %chin% c("AD-TC", "AD-LDL-C", "AD-non-HDL-C"),
+  .(
+    signal_id = fcase(
+      trait_pair == "AD-TC", "chr10 TSPAN14 | TC",
+      trait_pair == "AD-LDL-C", "chr10 TSPAN14 | LDL",
+      trait_pair == "AD-non-HDL-C", "chr10 TSPAN14 | nonHDL"
+    ),
+    regional_pp_h4_conservative = pp_h4_p12_div_10,
+    interpretation = fifelse(
+      pp_h4_p12_div_10 >= 0.80,
+      "Most prior-robust regional convergence",
+      "High default-prior support; prior-sensitive"
+    )
+  )
+])
+assert_unique(regional_prior, "signal_id", "Figure 1 regional prior sensitivity")
+
 # Panel D: top 15 variants with full trait-specific PIP records.
 variant_rank <- unique(fingerprint[, .(snp, rank_by_product_pip)])
 setorder(variant_rank, rank_by_product_pip)
@@ -149,6 +171,7 @@ assert_unique(fingerprint, c("snp", "trait_label"), "Figure 1 variant fingerprin
 write_clean(ldsc, "Figure_1_ldsc_apoe_conditioning.tsv")
 write_clean(regional, "Figure_1_regional_screen.tsv")
 write_clean(evidence, "Figure_1_evidence_matrix.tsv")
+write_clean(regional_prior, "Figure_1_regional_prior_sensitivity.tsv")
 write_clean(fingerprint, "Figure_1_variant_fingerprint.tsv")
 
 cat("Figure 1 v9 source preparation complete\n")

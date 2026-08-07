@@ -18,6 +18,10 @@ evidence <- read_v9_source(
   c("signal_id", "row_label", "locus", "focus_class", "PP.H4", "PP.H3", "conditional_top_snp_share",
     "coloc_susie", "hyprcoloc", "exact_sqtl_pp_h4", "supported_fraction")
 )
+prior_sensitivity <- read_v9_source(
+  paths$source_dir, "Figure_1_regional_prior_sensitivity.tsv",
+  c("signal_id", "regional_pp_h4_conservative")
+)
 fingerprint <- read_v9_source(
   paths$source_dir, "Figure_1_variant_fingerprint.tsv",
   c("rank_by_product_pip", "snp", "mean_pip", "n_cs_memberships", "functional_prior_score",
@@ -27,6 +31,7 @@ fingerprint <- read_v9_source(
 assert_unique_v9(ldsc, "display_label", "LDSC panel")
 assert_unique_v9(regional, "signal_id", "regional skyline")
 assert_unique_v9(evidence, "signal_id", "evidence matrix")
+assert_unique_v9(prior_sensitivity, "signal_id", "regional prior sensitivity")
 assert_unique_v9(fingerprint, c("snp", "trait_label"), "variant fingerprint")
 
 # -----------------------------------------------------------------------------
@@ -152,16 +157,17 @@ p_b <- ggplot() +
   )
 
 # -----------------------------------------------------------------------------
-# C. Locus-by-method evidence matrix.
+# C. Locus-by-method evidence matrix with explicit prior sensitivity.
 # -----------------------------------------------------------------------------
+evidence <- merge(evidence, prior_sensitivity, by = "signal_id", all.x = TRUE, sort = FALSE)
 method_spec <- data.table(
   source_column = c("PP.H4", "PP.H3", "conditional_top_snp_share", "coloc_susie",
-                    "hyprcoloc", "exact_sqtl_pp_h4", "supported_fraction"),
+                    "hyprcoloc", "exact_sqtl_pp_h4", "regional_pp_h4_conservative"),
   method = c("Regional\nH4", "Regional\nH3", "Top-SNP\nshare",
-             "SuSiE\nH4", "HyPrColoc", "Exact exon5–6\nH4", "Evidence\ncoverage"),
-  method_group = c(rep("Regional screen", 3), rep("TSPAN14 resolution", 3), "Summary"),
+             "SuSiE\nH4", "HyPrColoc", "Exact sQTL\nH4", "p12/10\nregional H4"),
+  method_group = c(rep("Regional", 3), rep("TSPAN14", 3), "Prior test"),
   family = c("Shared signal", "Distinct signal", "Variant concentration",
-             "Fine-mapped signal", "Multi-trait signal", "Exact splicing", "Evidence coverage")
+             "Fine-mapped signal", "Multi-trait signal", "Exact splicing", "Prior robustness")
 )
 
 for (column in method_spec$source_column) set(evidence, j = column, value = as.numeric(evidence[[column]]))
@@ -178,7 +184,7 @@ matrix_long <- melt(
 )
 matrix_long <- merge(matrix_long, method_spec, by = "source_column", all.x = TRUE, sort = FALSE)
 matrix_long[, method := factor(method, levels = method_spec$method)]
-matrix_long[, method_group := factor(method_group, levels = c("Regional screen", "TSPAN14 resolution", "Summary"))]
+matrix_long[, method_group := factor(method_group, levels = c("Regional", "TSPAN14", "Prior test"))]
 matrix_long[, available := !is.na(value)]
 
 matrix_grid <- unique(matrix_long[, .(method, method_group, row_factor, focus_class)])
@@ -191,7 +197,7 @@ family_colours <- c(
   "Fine-mapped signal" = v9_palette[["blue"]],
   "Multi-trait signal" = v9_palette[["teal_dark"]],
   "Exact splicing" = v9_palette[["purple"]],
-  "Evidence coverage" = v9_palette[["amber"]]
+  "Prior robustness" = v9_palette[["amber"]]
 )
 
 p_c <- ggplot() +
@@ -222,9 +228,9 @@ p_c <- ggplot() +
   theme_v9(5.75) +
   theme(
     axis.line = element_blank(), axis.ticks = element_blank(),
-    axis.text.x = element_text(size = 5.25, face = "bold", lineheight = 0.88, margin = margin(b = 1.5)),
+    axis.text.x = element_text(size = 4.85, face = "bold", lineheight = 0.88, margin = margin(b = 1.5)),
     axis.text.y = element_text(size = 5.25),
-    strip.text = element_text(size = 5.3, face = "bold", colour = v9_palette[["graphite"]], margin = margin(b = 1.2)),
+    strip.text = element_text(size = 4.9, face = "bold", colour = v9_palette[["graphite"]], margin = margin(b = 1.2)),
     legend.position = "bottom", legend.box = "vertical", legend.margin = margin(0, 0, 0, 0),
     plot.margin = margin(2, 2, 2, 2)
   ) +
