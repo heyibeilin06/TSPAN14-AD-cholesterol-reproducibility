@@ -26,10 +26,10 @@ The synchronized supplementary release is rebuilt in this order:
 ```powershell
 python code/08_supplementary_material/01_build_supplementary_source_tables.py
 node code/08_supplementary_material/02_build_supplementary_workbook.mjs .
-Rscript code/08_supplementary_material/08_regenerate_supplementary_figure_s2.R .
-Rscript code/08_supplementary_material/06_regenerate_supplementary_figure_s3.R .
-Rscript code/08_supplementary_material/07_regenerate_supplementary_figure_s9.R .
+Rscript code/08_supplementary_material/03_generate_supplementary_figures_S1_to_S9.R .
 python code/08_supplementary_material/04_build_supplementary_information.py
 ```
+
+The supplementary figure entry point dispatches package-local R scripts for S1-S9. It reads only redistributed derived data under `figures/*/data` and `audit/reviewer_revision`; no historical project directory is required.
 
 `02_build_supplementary_workbook.mjs` uses `@oai/artifact-tool`; install that package in the active Node environment or set `ARTIFACT_TOOL_MODULE` to its module file.
